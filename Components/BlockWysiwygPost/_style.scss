@@ -1,0 +1,18 @@
+[is='flynt-block-wysiwyg-post'] {
+  margin-bottom: $spacing-component/2;
+  
+  .container {
+    grid-column-end: 13;
+    grid-column-start: 4;
+  }
+
+  .content {
+    @include reset-content-margins;
+    text-align: inherit;
+
+    > :last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

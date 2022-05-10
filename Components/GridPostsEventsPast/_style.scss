@@ -1,0 +1,158 @@
+[is='flynt-grid-posts-events-past'] {
+  .preContent {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .grid {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: ($gap * -1) 0 0 ($gap * -1);
+
+    &--columns2,
+    &--columns3,
+    &--columns4,
+    &--columns5 {
+      .grid-item {
+        @media (min-width: $breakpoint-tablet) {
+          width: 50%;
+        }
+      }
+    }
+
+    &--columns3 {
+      .grid-item {
+        @media (min-width: $breakpoint-tablet-horizontal) {
+          width: 33.33%;
+        }
+      }
+    }
+
+    &--columns4 {
+      .grid-item {
+        /* ensure 2 columns stacking up until $breakpoint-desktop */
+        max-width: ($breakpoint-desktop - $spacing-small * 2 + $gap) / 3 + 1;
+
+        @media (min-width: $breakpoint-desktop) {
+          width: 25%;
+        }
+      }
+    }
+
+    &--columns5 {
+      .grid-item {
+        /* ensure 2 columns stacking up until $breakpoint-desktop */
+        max-width: ($breakpoint-desktop - $spacing-small * 2 + $gap) / 3 + 1;
+
+        @media (min-width: $breakpoint-desktop) {
+          width: 20%;
+        }
+      }
+    }
+  }
+
+  .grid-item {
+    max-width: 675px;
+    padding: $gap 0 0 $gap;
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+
+    &-image {
+      background: $color-contrast;
+      flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
+    }
+
+    &-inner {
+      @include reset-content-margins;
+      color: $color-text;
+      flex-grow: 1;
+      padding-top: 1em;
+
+      #{$heading-selectors} {
+        color: $color-headline;
+      }
+    }
+
+    &-date {
+      font-size: 1.75rem;
+      margin-bottom: 0;
+    }
+
+    &-title {
+      padding-top: 0;
+    }
+
+    &-excerpt {
+      padding-top: 1em;
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      text-decoration: none;
+    }
+
+    &-readingTime {
+      color: #7b838d;
+      font-size: 0.9rem;
+
+      .feather {
+        color: #7b838d;
+        height: 1rem;
+        margin-right: 2px;
+        width: 1rem;
+      }
+    }
+
+    &-footer {
+      align-items: center;
+      align-self: flex-end;
+      border-top: 1px solid $color-border;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      width: 100%;
+
+      .content-readMore {
+        padding: 0.9rem 0 1.1rem;
+
+        &::before {
+          bottom: 1.1rem;
+        }
+      }
+
+      @media (min-width: $breakpoint-tablet-horizontal) {
+        padding: 0 30px;
+      }
+    }
+  }
+
+  .allPostsLink {
+    text-align: center;
+
+    .button--link {
+      color: var(--blue);
+      font-weight: 400;
+
+      &::before {
+        background-color: var(--blue);
+      }
+
+      // &::after {
+      //   content: ">";
+      //   margin-left: 10px;
+      // }
+    }
+  }
+}

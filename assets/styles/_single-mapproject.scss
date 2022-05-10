@@ -1,0 +1,91 @@
+/* Custom styling for single map projects layouts */
+
+.single-mapproject {
+  background-color: $black;
+  color: $white;
+  
+  .post {
+    column-gap: $gap;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+
+    .flyntComponent {
+      column-gap: $gap;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      position: relative;
+    }
+  
+    &-header {
+      grid-column-end: 8;
+      grid-column-start: 4;
+
+      .intro {
+        margin-bottom: $spacing-component/2;
+      }
+
+      .meta {
+        div {
+          column-gap: $gap;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          row-gap: $gap;
+
+          span {
+            text-transform: uppercase;
+
+            &:first-child {
+              grid-column-end: 2;
+              grid-column-start: 1;
+            }
+
+            &:last-child {
+              grid-column-end: 5;
+              grid-column-start: 2;
+            }
+          }
+        }
+      }
+    }
+  
+    &-featuredImage {
+      grid-column-end: 13;
+      grid-column-start: 1;
+    }
+  
+    &-main {
+      grid-column-end: 13;
+      grid-column-start: 1;
+
+      .componentSpacing {
+        margin-bottom: $spacing-component;
+  
+        @media (min-width: $breakpoint-tablet) {
+          margin-bottom: $spacing-component;
+        }
+  
+        @media (min-width: $breakpoint-desktop) {
+          margin-bottom: $spacing-component;
+        }
+      }
+  
+      // > .componentSpacing {
+      //   &:first-child {
+      //     margin-top: $spacing-component;
+      //   }
+  
+      //   &:last-child {
+      //     margin-bottom: 0;
+      //   }
+      // }
+    }
+  }
+
+  .mainHeader,
+  .mainFooter {
+    img {
+      filter: invert(1);
+    }
+  }
+}

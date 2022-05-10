@@ -1,0 +1,37 @@
+{% if items|length > 0 %}
+  <div class="flyntComponent componentSpacing {{ options.theme }}" style="--themeBrand_colorBackground: {{ options.colorBrandBackground }}; --themeBrand_colorText: {{ options.colorBrandText }};" is="flynt-grid-posts-events-latest">
+    <div class="container"  style="padding: {{ options.paddingTopBottom }} {{ options.paddingLeftRight }}; max-width: {{ options.containerMaxWidth }};">
+      {% if preContentHtml %}
+        <div class="preContent">
+          {{ preContentHtml|e('wp_kses_post') }}
+          {# <div class="allPostsLink">
+            <a href="{{ postTypeArchiveLink }}" class="button button--link">{{ labels.allPosts }}</a>
+          </div> #}
+        </div>
+      {% endif %}
+      <ul class="grid grid--columns{{ options.columns }}">
+        {% for item in items %}
+          <li class="grid-item">
+            <div class="content">
+              <a href="{{ item.link }}" class="content-link" title="{{ item.title }}">
+                <img class="content-image lazyload"
+                  src="{{ item.thumbnail.src | resize(32) }}"
+                  data-srcset="{{function('wp_get_attachment_image_srcset', item.thumbnail.id)}}"
+                  data-sizes="auto"
+                  alt="{{ item.thumbnail.alt|e }}">
+                <div class="content-inner">
+                  <div class="h4 content-title">{{ item.title }}</div>
+                  {# {% if item.date %}
+                    <time class="content-date meta-date" datetime="{{ item.post_date }}">{{ item.date|date }}</time>
+                  {% endif %}
+                  <br />
+                  <p class="content-excerpt">{{ item.preview.read_more(false).length(18) }}</p> #}
+                </div>
+              </a>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endif %}

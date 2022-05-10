@@ -1,0 +1,20 @@
+[is='flynt-block-page-intro'] {
+  .container {
+    grid-column-end: 8;
+    grid-column-start: 4;
+  }
+
+  .content {
+    @include reset-content-margins;
+    text-align: inherit;
+
+    p {
+      font-weight: 700;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

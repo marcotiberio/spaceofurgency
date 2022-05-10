@@ -1,0 +1,42 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  <article class="post">
+    <header class="post-header componentSpacing">
+      <h1>{{ post.title }}</h1>
+      {% if post.introHtml %}
+        <div class="intro">{{ post.introHtml|e('wp_kses_post') }}</div>
+      {% endif %}
+      {% if post.yearProject or partnerProject %}
+        <div class="meta">
+          <div>
+          <span>Year</span>
+          <span>{{ post.yearProject|e('wp_kses_post') }}</span>
+          </div>
+          <div>
+          <span>Partner</span>
+          <span>{{ post.partnerProject|e('wp_kses_post') }}</span>
+          </div>
+        </div>
+      {% endif %}
+    </header>
+    {% if post.thumbnail %}
+    <div class="post-featuredImage componentSpacing">
+      <img src="{{ post.thumbnail }}"
+      data-srcset="{{function('wp_get_attachment_image_srcset', post.thumbnail.id)}}"
+      data-sizes="auto">
+      {% if post.thumbnail.caption %}
+        <figcaption class="figure-caption small">{{ post.thumbnail.caption|e }}</figcaption>
+      {% endif %}
+    </div>
+    {% endif %}
+    <section class="post-main">
+      {% for component in post.meta('projectComponents') %}
+        {{ renderComponent(component) }}
+      {% endfor %}
+    </section>
+    {# <section class="post-related">
+      {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h2>' ~ __('Related Posts') ~ '</h2>','taxonomies': post.categories(), 'options': {'theme': 'themeLight', 'columns': 3}}) }}
+    </section> #}
+  </article>
+{% endblock %}

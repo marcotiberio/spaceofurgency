@@ -1,0 +1,62 @@
+[is='flynt-navigation-main'] {
+  // $navigation-height: 100px;
+
+  display: none;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    display: block;
+  }
+
+  .wrapper {
+    // height: $navigation-height;
+  }
+
+  .container {
+    align-items: flex-start;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+
+  .logo {
+    display: block;
+    height: 100%;
+    max-width: 222px;
+
+    &-image {
+      // height: 100%;
+      // width: 100%;
+    }
+  }
+
+  .menu {
+    @include reset-list;
+    align-items: center;
+    display: flex;
+
+    &-item--current {
+      .menu-link {
+        color: $color-text;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    }
+
+    &-link {
+      color: currentColor;
+      display: inline-block;
+      font-weight: 700;
+      padding: 0 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s ease-out;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    }
+  }
+}

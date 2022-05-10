@@ -1,0 +1,19 @@
+[is='flynt-block-image'] {
+  &.flyntComponent--sizeHalf {
+    .container {
+      grid-column-end: 6;
+      grid-column-start: 1;
+    }
+  }
+
+  &.flyntComponent--sizeFull {
+    .container {
+      grid-column-end: 13;
+      grid-column-start: 1;
+    }
+  }
+
+  .figure {
+    margin: 0 auto;
+  }
+}
