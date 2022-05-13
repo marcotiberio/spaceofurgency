@@ -1,31 +1,25 @@
-<div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-slider-images">
+<div class="flyntComponent componentSpacing" is="flynt-slider-images">
   <script type="application/json">{{ jsonData|json_encode }}</script>
-  <div class="centerMaxWidthContainer">
+  <div class="container">
     {% if preContentHtml %}
       <div class="preContent">
         {{ preContentHtml|e('wp_kses_post') }}
       </div>
     {% endif %}
-    <div data-slider class="slider swiper-container themeLight">
+    <div data-slider class="slider swiper-container">
       <div class="swiper-wrapper">
         {% for image in images %}
           <div class="slider-item swiper-slide">
             <figure class="figure">
               <img class="figure-image lazyload"
-                src="{{ image.src|resizeDynamic(0, 540) }}"
-                srcset="{{ placeholderImage(image.aspect * 540, 540) }}"
-                data-srcset="
-                  {{ image.src|resizeDynamic(0, 1080) }} {{ (image.aspect * 1080)|round }}w,
-                  {{ image.src|resizeDynamic(0, 800) }} {{ (image.aspect * 800)|round }}w,
-                  {{ image.src|resizeDynamic(0, 540) }} {{ (image.aspect * 540)|round }}w,
-                  {{ image.src|resizeDynamic(0, 385) }} {{ (image.aspect * 385)|round }}w,
-                  {{ image.src|resizeDynamic(0, 250) }} {{ (image.aspect * 250)|round }}w"
+                src="{{ image.src|resize(32) }}"
+                data-srcset="{{function('wp_get_attachment_image_srcset', image.id)}}"
                 data-sizes="auto"
                 alt="{{ image.alt|e }}">
-              {% if image.caption %}
-                <figcaption class="figure-caption">{{ image.caption|e }}</figcaption>
-              {% endif %}
             </figure>
+            {% if image.caption %}
+              <figcaption class="figure-caption">{{ image.caption|e }}</figcaption>
+            {% endif %}
           </div>
         {% endfor %}
       </div>

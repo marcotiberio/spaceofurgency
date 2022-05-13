@@ -70,6 +70,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
+                    Components\BlockSoundcloudOembed\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwygPost\getACFLayout(),
                     Components\SliderImages\getACFLayout(),

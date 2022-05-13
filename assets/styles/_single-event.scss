@@ -1,14 +1,12 @@
-/* Custom styling for single map projects layouts */
+/* Custom styling for single post project layouts */
 
-.single-mapproject {
-  background-color: $black;
-  color: $white;
+.single-event {
+  background-color: $white;
   
   .post {
     column-gap: $gap;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    margin-top: 260px;
     position: relative;
 
     .flyntComponent {
@@ -82,20 +80,5 @@
       //   }
       // }
     }
-  }
-
-  .mainHeader,
-  .mainFooter {
-    img {
-      filter: invert(1);
-    }
-  }
-
-  .slider-button .feather {
-    color: $color-contrast !important;
-  }
-
-  .figure-caption {
-    color: $color-contrast !important;
   }
 }

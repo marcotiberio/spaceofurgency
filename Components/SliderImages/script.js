@@ -43,7 +43,10 @@ class SliderImages extends window.HTMLDivElement {
         nextEl: this.$buttonNext.get(0),
         prevEl: this.$buttonPrev.get(0)
       },
-      a11y: options.a11y
+      a11y: options.a11y,
+      // autoHeight: true,
+      slidesPerView: 3,
+      spaceBetween: 30
     }
     if (options.autoplay && options.autoplaySpeed) {
       config.autoplay = {

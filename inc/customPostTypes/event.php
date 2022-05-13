@@ -59,7 +59,7 @@ function registerEventPostType()
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
     ];
-    register_post_type('event', $args);
+    register_post_type('events', $args);
 }
 
 add_action('init', '\\Flynt\\CustomPostTypes\\registerEventPostType');

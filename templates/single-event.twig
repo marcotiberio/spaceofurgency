@@ -31,7 +31,7 @@
     </div>
     {% endif %}
     <section class="post-main">
-      {% for component in post.meta('mapprojectComponents') %}
+      {% for component in post.meta('eventComponents') %}
         {{ renderComponent(component) }}
       {% endfor %}
     </section>

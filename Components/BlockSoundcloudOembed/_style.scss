@@ -1,0 +1,25 @@
+[is='flynt-block-soundcloud-oembed'] {
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .container {
+    align-items: flex-end;
+    display: flex;
+    flex-flow: column;
+    grid-column-end: 13;
+    grid-column-start: 4;
+    justify-content: flex-end;
+    width: 100%;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      grid-column-end: 5;
+      grid-column-start: 1;
+    }
+  }
+
+  .visualAudible__body {
+    display: none !important;
+  }
+}

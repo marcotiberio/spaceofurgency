@@ -33,7 +33,6 @@ html {
 body {
   height: fit-content;
   overflow-x: hidden;
-  padding: $spacing-large $spacing-small;
 }
 
 /**
@@ -147,6 +146,7 @@ img {
 figcaption {
   font-size: 0.875rem;
   margin-top: 0.625rem;
+  text-transform: uppercase;
 }
 
 code {
@@ -543,6 +543,14 @@ select {
   background-color: $orange;
 }
 
+.mainHeader {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .pageWrapper {
   display: flex;
   flex-direction: column;
@@ -564,6 +572,7 @@ select {
     column-gap: $gap;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    padding: $spacing-large $spacing-small;
     position: relative;
   }
 }
@@ -613,17 +622,6 @@ select {
 
 .preContent {
   @include reset-content-margins;
-  margin: 0 auto 32px;
-  max-width: $content-max-width;
-  text-align: center;
-
-  @media (min-width: $breakpoint-tablet) {
-    margin-bottom: $spacing-small;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    margin-bottom: $spacing-large;
-  }
 }
 
 .postContent {

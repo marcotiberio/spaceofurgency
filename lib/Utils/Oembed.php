@@ -22,7 +22,7 @@ class Oembed
         $output = '';
         if ($iframeTagHtml) {
             $Dom = new DOMDocument();
-            $Dom->loadHTML($iframeTagHtml);
+            @$Dom->loadHTML($iframeTagHtml);
             $domNodes = $Dom->getElementsByTagName('iframe');
             foreach ($domNodes as $node) {
                 $src = $node->getAttribute('src');

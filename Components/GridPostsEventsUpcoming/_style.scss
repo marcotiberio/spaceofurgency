@@ -1,9 +1,15 @@
 [is='flynt-grid-posts-events-upcoming'] {
+  background-color: $purple;
+
+  .container {
+    grid-column-end: 13;
+    grid-column-start: 1;
+    padding-top: 20px;
+  }
+  
   .preContent {
-    align-items: center;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    margin-bottom: $spacing-large;
+    text-transform: uppercase;
   }
 
   .grid {
@@ -11,72 +17,34 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: ($gap * -1) 0 0 ($gap * -1);
 
-    &--columns2,
-    &--columns3,
-    &--columns4,
-    &--columns5 {
-      .grid-item {
-        @media (min-width: $breakpoint-tablet) {
-          width: 50%;
-        }
-      }
+    &-item {
+      width: 100%;
     }
-
-    &--columns3 {
-      .grid-item {
-        @media (min-width: $breakpoint-tablet-horizontal) {
-          width: 33.33%;
-        }
-      }
-    }
-
-    &--columns4 {
-      .grid-item {
-        /* ensure 2 columns stacking up until $breakpoint-desktop */
-        max-width: ($breakpoint-desktop - $spacing-small * 2 + $gap) / 3 + 1;
-
-        @media (min-width: $breakpoint-desktop) {
-          width: 25%;
-        }
-      }
-    }
-
-    &--columns5 {
-      .grid-item {
-        /* ensure 2 columns stacking up until $breakpoint-desktop */
-        max-width: ($breakpoint-desktop - $spacing-small * 2 + $gap) / 3 + 1;
-
-        @media (min-width: $breakpoint-desktop) {
-          width: 20%;
-        }
-      }
-    }
-  }
-
-  .grid-item {
-    max-width: 675px;
-    padding: $gap 0 0 $gap;
-    width: 100%;
   }
 
   .content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 100%;
+    column-gap: $gap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
 
     &-image {
-      background: $color-contrast;
       flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
+      grid-column-end: 2;
+      grid-column-start: 1;
     }
 
     &-inner {
       @include reset-content-margins;
+      align-items: flex-start;
       color: $color-text;
-      flex-grow: 1;
-      padding-top: 1em;
+      display: flex;
+      flex-flow: column;
+      grid-column-end: 3;
+      grid-column-start: 2;
+      justify-content: space-between;
+      padding-left: 23px;
 
       #{$heading-selectors} {
         color: $color-headline;
@@ -84,7 +52,6 @@
     }
 
     &-date {
-      font-size: 1.75rem;
       margin-bottom: 0;
     }
 
@@ -139,20 +106,13 @@
   }
 
   .allPostsLink {
-    text-align: center;
+    color: $color-text;
+    text-align: left;
+    text-transform: uppercase;
 
-    .button--link {
-      color: var(--blue);
-      font-weight: 400;
-
-      &::before {
-        background-color: var(--blue);
-      }
-
-      // &::after {
-      //   content: ">";
-      //   margin-left: 10px;
-      // }
+    .link {
+      color: $color-text;
+      text-decoration: none;
     }
   }
 }

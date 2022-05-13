@@ -1,27 +1,20 @@
 [is='flynt-block-video-oembed'] {
   @import 'Partials/video';
 
-  &.flyntComponent--sizeSmall {
-    .video {
-      max-width: 375px;
+  .container {
+    align-items: center;
+    column-gap: $spacing-small;
+    display: flex;
+    grid-column-end: 13;
+    grid-column-start: 4;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      display: block;
     }
   }
-
-  &.flyntComponent--sizeMedium {
-    .video {
-      max-width: $content-max-width;
-    }
-  }
-
-  &.flyntComponent--sizeLarge {
-    .video {
-      max-width: 800px;
-    }
-  }
-
-  &.flyntComponent--sizeFull {
-    .figure-caption {
-      margin-left: 0.625rem;
-    }
+  
+  .figure-caption {
+    margin-left: 0.625rem;
   }
 }

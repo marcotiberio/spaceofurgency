@@ -20,7 +20,7 @@ add_action('Flynt/afterRegisterComponents', function () {
             ],
             [
                 'label' => __('Intro', 'flynt'),
-                'name' => 'intro',
+                'name' => 'introHtml',
                 'type' => 'wysiwyg',
                 'media_upload' => 0,
                 'wrapper' => [
@@ -28,13 +28,8 @@ add_action('Flynt/afterRegisterComponents', function () {
                 ]
             ],
             [
-                'label' => __('Contact', 'flynt'),
-                'name' => 'contactLink',
-                'type' => 'url',
-            ],
-            [
-                'label' => 'Datum (Required)',
-                'instructions' => 'Gibt das Datum des Termins an, oder das Ende einer Zeitspanne.',
+                'label' => 'Date (Required)',
+                'instructions' => '',
                 'required' => 1,
                 'name' => 'end_date',
                 'type' => 'date_picker',
@@ -44,7 +39,7 @@ add_action('Flynt/afterRegisterComponents', function () {
             ],
             [
                 'label' => 'Start (Optional)',
-                'instructions' => 'Falls eine Zeitspanne angezeigt werden soll',
+                'instructions' => '',
                 'name' => 'start_date',
                 'type' => 'date_picker',
                 'display_format' => 'F j, Y',
@@ -57,7 +52,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 [
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'event',
+                    'value' => 'events',
                 ],
             ],
         ],
@@ -73,9 +68,12 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
+                    Components\BlockCollapse\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
+                    Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
+                    Components\SliderImages\getACFLayout(),
                 ],
             ],
         ],
@@ -84,7 +82,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 [
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'event',
+                    'value' => 'events',
                 ],
             ],
         ],

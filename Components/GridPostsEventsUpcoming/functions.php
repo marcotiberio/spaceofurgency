@@ -21,7 +21,7 @@ add_filter('Flynt/addComponentData?name=GridPostsEventsUpcoming', function ($dat
         'category' => join(',', array_map(function ($taxonomy) {
             return $taxonomy->term_id;
         }, $data['taxonomies'])),
-        'posts_per_page' => intval($data['options']['columns']) * 5,
+        'posts_per_page'    => 1,
         'meta_key'          => 'end_date',
         'orderby'           => 'meta_value',
         'order'             => 'ASC',
@@ -56,12 +56,8 @@ function getACFLayout()
             ],
             [
                 'label' => __('Title', 'flynt'),
-                'name' => 'preContentHtml',
-                'type' => 'wysiwyg',
-                'tabs' => 'visual,text',
-                'media_upload' => 0,
-                'delay' => 1,
-                'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
+                'name' => 'preContent',
+                'type' => 'text',
             ],
             [
                 'label' => __('Categories', 'flynt'),
@@ -76,36 +72,6 @@ function getACFLayout()
                 'save_terms' => 0,
                 'load_terms' => 0,
                 'return_format' => 'object'
-            ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'layout' => 'row',
-                'sub_fields' => [
-                    FieldVariables\getTheme(),
-                    FieldVariables\getColorBrandBackground(),
-                    FieldVariables\getColorBrandText(),
-                    FieldVariables\getMaxWidthContainer(),
-                    FieldVariables\getPaddingTopBottom(),
-                    FieldVariables\getPaddingLeftRight(),
-                    [
-                        'label' => __('Columns', 'flynt'),
-                        'name' => 'columns',
-                        'type' => 'number',
-                        'default_value' => 5,
-                        'min' => 1,
-                        'max' => 5,
-                        'step' => 1
-                    ]
-                ]
             ],
         ]
     ];

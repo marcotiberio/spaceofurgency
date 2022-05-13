@@ -7,12 +7,14 @@
     column-gap: $gap;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    margin-top: 260px;
     position: relative;
 
     .flyntComponent {
       column-gap: $gap;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
+      padding: $spacing-large $spacing-small;
       position: relative;
     }
   
@@ -51,6 +53,7 @@
     &-featuredImage {
       grid-column-end: 13;
       grid-column-start: 1;
+      padding: 0 $spacing-small;
     }
   
     &-main {
@@ -69,15 +72,15 @@
         }
       }
   
-      // > .componentSpacing {
-      //   &:first-child {
-      //     margin-top: $spacing-component;
-      //   }
+      > .componentSpacing {
+        // &:first-child {
+        //   margin-top: $spacing-component;
+        // }
   
-      //   &:last-child {
-      //     margin-bottom: 0;
-      //   }
-      // }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }

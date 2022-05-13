@@ -29,6 +29,16 @@ function getACFLayout()
                 'placement' => 'top',
                 'endpoint' => 0
             ],
+            // [
+            //     'label' => __('Video Size', 'flynt'),
+            //     'name' => 'videoSize',
+            //     'type' => 'button_group',
+            //     'choices' => [
+            //         'videoHalf' => '<i class=\'dashicons dashicons-menu-alt2\' title=\'Half-Width Video\'></i>',
+            //         'videoFull' => '<i class=\'dashicons dashicons-menu-alt3\' title=\'Full-Width Video\'></i>',
+            //     ],
+            //     'default_value' => 'videoHalf'
+            // ],
             [
                 'label' => __('Poster Image', 'flynt'),
                 'name' => 'posterImage',
@@ -36,45 +46,19 @@ function getACFLayout()
                 'preview_size' => 'medium',
                 'mime_types' => 'jpg,jpeg,png',
                 'instructions' => __('Recommended Size: Min-Width 1920px; Min-Height: 1080px; Image-Format: JPG, PNG. Aspect Ratio 16/9.', 'flynt'),
-                'required' => 1
+                'required' => 1,
+                'wrapper' => [
+                    'width' => '50',
+                ],
             ],
             [
                 'label' => __('Video', 'flynt'),
                 'name' => 'oembed',
                 'type' => 'oembed',
-                'required' => 1
-            ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'layout' => 'row',
-                'sub_fields' => [
-                    FieldVariables\getTheme(),
-                    [
-                        'label' => __('Size', 'flynt'),
-                        'name' => 'size',
-                        'type' => 'radio',
-                        'other_choice' => 0,
-                        'save_other_choice' => 0,
-                        'layout' => 'horizontal',
-                        'choices' => [
-                            'sizeSmall' => __('Small', 'flynt'),
-                            'sizeMedium' => __('Medium', 'flynt'),
-                            'sizeLarge' => __('Large (Default)', 'flynt'),
-                            'sizeHuge' => __('Huge', 'flynt'),
-                            'sizeFull' => __('Full', 'flynt'),
-                        ],
-                        'default_value' => 'sizeLarge',
-                    ],
-                ]
+                'required' => 1,
+                'wrapper' => [
+                    'width' => '50',
+                ],
             ]
         ]
     ];

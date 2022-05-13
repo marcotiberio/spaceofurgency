@@ -1,18 +1,23 @@
 [is='flynt-slider-images'] {
+  .container {
+    grid-column-end: 13;
+    grid-column-start: 1;
+  }
+
   .slider {
-    max-width: 800px;
+    max-width: 100%;
     position: relative;
 
     &-item {
       height: 0;
       overflow: hidden;
-      padding-bottom: (2/3) * 100%;
+      // padding-bottom: (2/3) * 100%;
+      padding-bottom: 40%;
       position: relative;
     }
 
     &-button {
       align-items: center;
-      background-color: rgba($color-background-dark, 0.5);
       border-radius: 50%;
       cursor: pointer;
       display: flex;
@@ -46,7 +51,7 @@
       }
 
       .feather {
-        color: $color-background;
+        color: $color-text;
         height: auto;
         top: 0;
         width: 80%;
@@ -58,26 +63,26 @@
     bottom: 0;
     left: 0;
     margin-bottom: 0;
-    position: absolute;
+    position: relative;
     right: 0;
     top: 0;
 
     &-image {
-      height: 100%;
+      height: auto;
       margin: 0 auto;
       width: auto;
     }
 
     &-caption {
-      background: rgba($color-background-dark, 0.5);
-      bottom: 0;
-      color: $color-background-light;
+      color: $color-text;
       display: inline-block;
       font-size: 0.8rem;
+      left: 0;
       max-width: 450px;
-      padding: 0.25rem 0.5rem;
-      position: absolute;
-      right: 0;
+      padding: 0.25rem 0;
+      position: relative;
+      text-transform: uppercase;
+      top: 0;
     }
   }
 }

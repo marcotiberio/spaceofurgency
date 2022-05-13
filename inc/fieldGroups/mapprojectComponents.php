@@ -62,14 +62,15 @@ add_action('Flynt/afterRegisterComponents', function () {
         'style' => 'seamless',
         'fields' => [
             [
-                'name' => 'projectComponents',
-                'label' => __('Project Components', 'flynt'),
+                'name' => 'mapprojectComponents',
+                'label' => __('Map Project Components', 'flynt'),
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
+                    Components\BlockSoundcloudOembed\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwygPost\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
