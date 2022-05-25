@@ -18,9 +18,10 @@ function getTheme()
         'ajax' => 0,
         'choices' => [
             '' => __('(none)', 'flynt'),
-            'themeLight' => __('Light', 'flynt'),
-            'themeDark' => __('Dark', 'flynt'),
-            'themeHero' => __('Hero', 'flynt'),
+            'themeOrange' => __('Orange', 'flynt'),
+            'themePurple' => __('Purple', 'flynt'),
+            'themeWhite' => __('White', 'flynt'),
+            'themeBlack' => __('Black', 'flynt'),
         ]
     ];
 }
