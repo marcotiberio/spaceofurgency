@@ -1,0 +1,73 @@
+[is='flynt-grid-projects-latest'] {
+  .container {
+    grid-column-end: 13;
+    grid-column-start: 1;
+  }
+
+  .grid {
+    @include reset-list;
+    column-gap: $gap;
+    display: grid;
+    flex-wrap: wrap;
+    grid-auto-rows: auto;
+    grid-column-end: 13;
+    grid-column-start: 1;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    row-gap: $spacing-large*2;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .grid-item {
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+
+    &-image {
+      background: $color-contrast;
+      flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
+    }
+
+    &-inner {
+      @include reset-content-margins;
+      color: $color-text;
+      flex-grow: 1;
+      padding-top: 12px;
+
+      #{$heading-selectors} {
+        color: $color-headline;
+      }
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      text-decoration: none;
+    }
+  }
+
+  .allPostsLink {
+    color: $black;
+    margin-top: $spacing-component/2;
+    text-align: left;
+    text-transform: uppercase;
+
+    a {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+}

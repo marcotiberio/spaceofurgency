@@ -23,6 +23,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\GridImageText\getACFLayout(),
                     Components\GridPostsEventsUpcoming\getACFLayout(),
                     Components\GridPostsLatest\getACFLayout(),
+                    Components\GridProjectsLatest\getACFLayout(),
                     Components\GridExamplesLatest\getACFLayout(),
                     Components\ListComponents\getACFLayout(),
                     Components\SliderImages\getACFLayout(),

@@ -35,8 +35,9 @@
 
   .content {
     @include reset-content-margins;
-    font-weight: 700;
+    font-weight: 15px;
     margin: 10px 0 0;
+    text-transform: uppercase;
 
     @media (min-width: $breakpoint-tablet) {
       margin: 0;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Flynt\Components\GridPostsLatest;
+namespace Flynt\Components\GridProjectsLatest;
 
 use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 use Timber\Timber;
 
-const POST_TYPE = 'post';
+const POST_TYPE = 'project';
 
-add_filter('Flynt/addComponentData?name=GridPostsLatest', function ($data) {
+add_filter('Flynt/addComponentData?name=GridProjectsLatest', function ($data) {
     $postType = POST_TYPE;
 
     $data['taxonomies'] = $data['taxonomies'] ?: [];
@@ -32,8 +32,8 @@ add_filter('Flynt/addComponentData?name=GridPostsLatest', function ($data) {
 function getACFLayout()
 {
     return [
-        'name' => 'GridPostsLatest',
-        'label' => 'Grid: Posts Latest',
+        'name' => 'GridProjectsLatest',
+        'label' => 'Grid: Projects Latest',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),
@@ -94,7 +94,7 @@ function getACFLayout()
     ];
 }
 
-Options::addTranslatable('GridPostsLatest', [
+Options::addTranslatable('GridProjectsLatest', [
     [
         'label' => __('Labels', 'flynt'),
         'name' => 'labelsTab',
