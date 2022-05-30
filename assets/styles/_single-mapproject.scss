@@ -1,6 +1,6 @@
 /* Custom styling for single map projects layouts */
 
-.single-mapproject {
+.single-map {
   background-color: $black;
   color: $white;
   
@@ -8,7 +8,6 @@
     column-gap: $gap;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    margin-top: 260px;
     position: relative;
 
     .flyntComponent {
@@ -18,35 +17,60 @@
       padding: $spacing-large $spacing-small;
       position: relative;
     }
+
+    &-map {
+      grid-column-end: 13;
+      grid-column-start: 1;
+    }
   
     &-header {
-      grid-column-end: 8;
-      grid-column-start: 4;
+      align-items: flex-start;
+      display: grid;
+      grid-column-end: 13;
+      grid-column-start: 1;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 160px;
 
-      .intro {
-        margin-bottom: $spacing-component/2;
-      }
+      .left {
+        grid-column-end: 4;
+        grid-column-start: 2;
 
-      .meta {
-        div {
-          column-gap: $gap;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          row-gap: $gap;
-
-          span {
-            text-transform: uppercase;
+        .meta {
+          div {
+            border-bottom: 1px solid $white;
+            column-gap: $gap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: $gap/2 0;
+            row-gap: $gap;
 
             &:first-child {
-              grid-column-end: 2;
-              grid-column-start: 1;
+              padding-top: 0;
             }
-
-            &:last-child {
-              grid-column-end: 5;
-              grid-column-start: 2;
+  
+            span {
+              text-transform: uppercase;
+  
+              &:first-child {
+                grid-column-end: 3;
+                grid-column-start: 1;
+              }
+  
+              &:last-child {
+                grid-column-end: 5;
+                grid-column-start: 3;
+              }
             }
           }
+        }
+      }
+
+      .right {
+        grid-column-end: 12;
+        grid-column-start: 7;
+
+        .intro {
+          margin-top: 7.813rem;
         }
       }
     }
@@ -71,23 +95,6 @@
           margin-bottom: $spacing-component;
         }
       }
-  
-      // > .componentSpacing {
-      //   &:first-child {
-      //     margin-top: $spacing-component;
-      //   }
-  
-      //   &:last-child {
-      //     margin-bottom: 0;
-      //   }
-      // }
-    }
-  }
-
-  .mainHeader,
-  .mainFooter {
-    img {
-      filter: invert(1);
     }
   }
 
@@ -97,5 +104,18 @@
 
   .figure-caption {
     color: $color-contrast !important;
+  }
+
+  .acf-map {
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .acf-map {
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
   }
 }

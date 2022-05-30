@@ -1,46 +1,96 @@
 [is='flynt-navigation-footer'] {
-  font-size: 0.8rem;
+  background-color: $orange;
   padding: $spacing-large $spacing-small;
 
   .container {
-    text-align: center;
+    align-items: flex-start;
+    column-gap: $gap;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 
-    @media (min-width: $breakpoint-tablet) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+    &-left {
+      align-items: flex-start;
+      display: grid;
+      grid-column-end: 7;
+      grid-column-start: 1;
+      grid-template-columns: repeat(6, 1fr);
 
-    .logo {
-      display: block;
-      height: 100%;
-      max-width: 104px;
-  
-      &-image {
-        // height: 100%;
-        // width: 100%;
+      .content {
+        grid-column-end: 4;
+        grid-column-start: 1;
+      }
+
+      .repeater {
+        grid-column-end: 5;
+        grid-column-start: 7;
+
+        &-title {
+          color: $white;
+        }
       }
     }
 
     &-right {
-      align-items: flex-end;
-      display: flex;
-      flex-flow: row wrap;
+      align-items: flex-start;
+      display: grid;
+      grid-column-end: 13;
+      grid-column-start: 7;
+      grid-template-columns: repeat(6, 1fr);
+
+      .repeater {
+        grid-column-end: 4;
+        grid-column-start: 2;
+
+        &-title {
+          color: $white;
+        }
+      }
 
       .navigation {
-        padding-right: 2rem;
+        grid-column-end: 7;
+        grid-column-start: 5;
       }
     }
   }
 
   .content {
     @include reset-content-margins;
+    color: $white;
     font-weight: 15px;
     margin: 10px 0 0;
     text-transform: uppercase;
 
     @media (min-width: $breakpoint-tablet) {
       margin: 0;
+    }
+  }
+
+  .repeater {
+    &-title {
+      margin-bottom: $spacing-small;
+    }
+  }
+
+  .list {
+    @include reset-list;
+    display: flex;
+    flex-flow: row wrap;
+
+    .panel {
+      padding-right: 50px;
+      
+      a {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+          color: $white;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+      }
     }
   }
 

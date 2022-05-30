@@ -1,5 +1,6 @@
 [is='flynt-grid-posts-events-upcoming'] {
   background-color: $purple;
+  padding: $spacing-large 0 !important;
 
   .container {
     grid-column-end: 13;
@@ -9,6 +10,7 @@
   
   .preContent {
     margin-bottom: $spacing-large;
+    padding: 0 $spacing-small;
     text-transform: uppercase;
   }
 
@@ -19,7 +21,13 @@
     justify-content: flex-start;
 
     &-item {
+      margin-bottom: $gap;
+      margin-top: $gap;
       width: 100%;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 
@@ -27,6 +35,7 @@
     column-gap: $gap;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 $spacing-small;
     width: 100%;
 
     @media (max-width: $breakpoint-mobile-horizontal) {
@@ -43,13 +52,11 @@
     &-inner {
       @include reset-content-margins;
       align-items: flex-start;
-      color: $color-text;
       display: flex;
       flex-flow: column;
       grid-column-end: 3;
       grid-column-start: 2;
       justify-content: space-between;
-      padding-left: 23px;
 
       #{$heading-selectors} {
         color: $color-headline;
@@ -82,7 +89,7 @@
   }
 
   .allPostsLink {
-    color: $color-text;
+    padding: 0 $spacing-small;
     text-align: left;
     text-transform: uppercase;
 
@@ -91,8 +98,13 @@
     }
 
     .link {
-      color: $color-text;
       text-decoration: none;
+    }
+  }
+
+  hr {
+    &:last-child {
+      display: none;
     }
   }
 }

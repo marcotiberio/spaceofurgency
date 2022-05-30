@@ -1,0 +1,18 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  
+
+  <div class="content">
+    <div class="acf-map acf-map-archive" data-zoom="14" data-key="AIzaSyDk5541gq_jV25sRiAhVjikP_PGsWkE3yg">
+      {% for post in archiveMap %}
+        <a href="{{ post.link }}">
+          <div class="marker" data-lat="{{ post.location.lat }}" data-lng="{{ post.location.lng }}">
+          {{ post.title }}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  
+{% endblock %}

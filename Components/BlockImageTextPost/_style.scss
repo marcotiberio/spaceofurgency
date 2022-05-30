@@ -1,0 +1,46 @@
+[is='flynt-block-image-text-post'] {
+  .container {
+    grid-column-end: 13;
+    grid-column-start: 1;
+  }
+
+  .box {
+    align-items: flex-start;
+    column-gap: $gap;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(12, 1fr);
+
+    &--imageLeft {
+      .box-inner--image {
+        grid-column-end: 9;
+        grid-column-start: 1;
+      }
+
+      .box-inner--content {
+        grid-column-end: 13;
+        grid-column-start: 9;
+      }
+    }
+
+    &--imageRight {
+      .box-inner--content {
+        grid-column-end: 4;
+        grid-column-start: 1;
+      }
+
+      .box-inner--image {
+        grid-column-end: 13;
+        grid-column-start: 5;
+      }
+    }
+  }
+
+  .figure {
+    margin: 0;
+
+    &-caption {
+      position: absolute;
+    }
+  }
+}

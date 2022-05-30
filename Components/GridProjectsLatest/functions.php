@@ -45,11 +45,7 @@ function getACFLayout()
             [
                 'label' => __('Title', 'flynt'),
                 'name' => 'preContentHtml',
-                'type' => 'wysiwyg',
-                'tabs' => 'visual,text',
-                'media_upload' => 0,
-                'delay' => 1,
-                'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
+                'type' => 'text',
             ],
             [
                 'label' => __('Categories', 'flynt'),

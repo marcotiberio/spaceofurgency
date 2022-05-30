@@ -44,6 +44,14 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'wrapper' => [
                     'width' => '50',
                 ]
+            ],
+            [
+                'label' => __('Location', 'flynt'),
+                'name' => 'locationProject',
+                'type' => 'google_map',
+                'wrapper' => [
+                    'width' => '100',
+                ]
             ]
         ],
         'location' => [
@@ -70,6 +78,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
+                    Components\BlockQuote\getACFLayout(),
                     Components\BlockSoundcloudOembed\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwygPost\getACFLayout(),

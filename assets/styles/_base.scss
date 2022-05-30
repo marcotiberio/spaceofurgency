@@ -4,20 +4,19 @@
 * Top level styles every element should inherit.
 */
 
-@include font-face('Montserrat', 'montserrat-v14-latin-regular', '400', 'normal');
-@include font-face('Montserrat', 'montserrat-v14-latin-italic', '400', 'italic');
-@include font-face('Montserrat', 'montserrat-v14-latin-700', '700', 'normal');
-@include font-face('Montserrat', 'montserrat-v14-latin-700italic', '700', 'italic');
+@include font-face('Octin', 'octinCollegeRegular', '400', 'normal');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
 
 html {
   background-color: $color-background;
   box-sizing: border-box;
   color: $color-text;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Octin', Helvetica, Arial, sans-serif;
+  font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
-  line-height: 1.625;
+  line-height: 1.605;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -43,10 +42,7 @@ body {
 
 #{$heading-selectors} {
   color: inherit;
-  font-weight: 700;
-  line-height: 1.45;
-  margin-bottom: 0.9rem;
-  margin-top: 0;
+  font-weight: 500;
 
   a,
   a:hover,
@@ -58,58 +54,37 @@ body {
 
 h1,
 .h1 {
-  font-size: 2.25rem;
-  line-height: 1.175;
-  margin-bottom: 1.5rem;
-  padding-top: 2rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 4.063rem;
+  line-height: 3.75rem;
+  margin-bottom: 3.75rem;
+  margin-top: 0;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 2.75rem;
+    font-size: 4.063rem;
   }
 }
 
 h2,
 .h2 {
-  font-size: 1.5rem;
-  line-height: 1.25;
-  padding-top: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2.188rem;
+  line-height: 2.188rem;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 2.5rem;
+    font-size: 2.188rem;
   }
 }
 
 h3,
 .h3 {
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 1.125rem;
   padding-top: 1rem;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
     font-size: 1.25rem;
   }
-}
-
-h4,
-.h4 {
-  font-size: 1rem;
-  padding-top: 0.5rem;
-
-  @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 1.125rem;
-  }
-}
-
-h5,
-.h5 {
-  font-size: 1rem;
-  font-weight: 400;
-  padding-top: 0.5rem;
-}
-
-h6,
-.h6 {
-  font-size: 1rem;
-  padding-top: 0.5rem;
 }
 
 a {
@@ -126,15 +101,17 @@ p,
 .paragraph,
 table,
 figure {
+  font-size: 1.25rem;
   margin: 0 0 1.2rem;
 }
 
 hr {
-  background-color: $color-border;
+  background-color: $white;
   border: 0;
   display: block;
   height: 1px;
-  margin: 2.4rem 0;
+  margin: 0;
+  width: 100%;
 }
 
 img {
@@ -552,6 +529,7 @@ select {
 }
 
 .pageWrapper {
+  background-color: var(--pageBackground);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -581,27 +559,27 @@ select {
   position: relative;
 }
 
-.componentSpacing {
-  margin-bottom: $spacing-component;
+// .componentSpacing {
+//   margin-bottom: $spacing-component;
 
-  @media (min-width: $breakpoint-tablet) {
-    margin-bottom: $spacing-component;
-  }
+//   @media (min-width: $breakpoint-tablet) {
+//     margin-bottom: $spacing-component;
+//   }
 
-  @media (min-width: $breakpoint-desktop) {
-    margin-bottom: $spacing-component;
-  }
-}
+//   @media (min-width: $breakpoint-desktop) {
+//     margin-bottom: $spacing-component;
+//   }
+// }
 
-> .componentSpacing {
-  &:first-child {
-    margin-top: $spacing-component;
-  }
+// > .componentSpacing {
+//   &:first-child {
+//     margin-top: $spacing-component;
+//   }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+// }
 
 .centerMaxWidthContainer {
   @include center;
@@ -622,6 +600,14 @@ select {
 
 .preContent {
   @include reset-content-margins;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.125rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-mobile-horizontal) {
+    font-size: 1.25rem;
+  }
 }
 
 .postContent {
@@ -723,6 +709,12 @@ select {
   &:focus {
     top: 0;
   }
+}
+
+/* Google Maps */
+
+.gmnoprint {
+  display: none !important;
 }
 
 /**

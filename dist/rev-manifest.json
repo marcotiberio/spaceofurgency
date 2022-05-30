@@ -29,9 +29,11 @@
   "assets/fonts/montserrat-v14-latin-italic.woff2": "assets/fonts/montserrat-v14-latin-italic-5cad650422.woff2",
   "assets/fonts/montserrat-v14-latin-regular.woff": "assets/fonts/montserrat-v14-latin-regular-8102c4838f.woff",
   "assets/fonts/montserrat-v14-latin-regular.woff2": "assets/fonts/montserrat-v14-latin-regular-bc3aa95dca.woff2",
+  "assets/fonts/octinCollegeRegular.woff2": "assets/fonts/octinCollegeRegular-9be6edea6c.woff2",
   "assets/icons/check-circle.svg": "assets/icons/check-circle-98401bcdb9.svg",
   "assets/icons/spinner.svg": "assets/icons/spinner-2e5c842fc5.svg",
-  "assets/main.css": "assets/main-2f471480c4.css",
-  "assets/main.js": "assets/main-2a20a684c5.js",
+  "assets/images/markerorange-1.svg": "assets/images/markerorange-1-1a4c2da31f.svg",
+  "assets/main.css": "assets/main-23ea9bd1a1.css",
+  "assets/main.js": "assets/main-465666535c.js",
   "assets/main.js.LICENSE.txt": "assets/main-957f80e714.js.LICENSE.txt"
 }

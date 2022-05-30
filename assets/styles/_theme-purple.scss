@@ -1,34 +1,38 @@
 .themePurple {
   background-color: $purple;
 
+  hr {
+    color: $color-background-light;
+  }
+
   &,
   #{$heading-selectors},
   a,
   .feather {
-    color: $color-background-dark;
+    color: $color-background-light;
   }
 
   a:hover,
   a:focus {
-    color: $color-background-dark;
+    color: $color-background-light;
   }
 
   .button {
-    background-color: $color-background-dark;
-    border-color: $color-background-dark;
+    background-color: $color-background-light;
+    border-color: $color-background-light;
     color: $color-background;
 
     &:hover,
     &:focus {
       background-color: $color-background;
       border-color: $color-background;
-      color: $color-background-dark;
+      color: $color-background-light;
     }
 
     &--ghost {
       background-color: transparent;
-      border-color: $color-background-dark;
-      color: $color-background-dark;
+      border-color: $color-background-light;
+      color: $color-background-light;
 
       &:hover,
       &:focus {
@@ -52,7 +56,7 @@
         color: $color-background-dark;
 
         &::before {
-          background-color: $color-background-dark;
+          background-color: $color-background-light;
         }
       }
 

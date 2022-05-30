@@ -1,0 +1,28 @@
+{# {% if items|length > 0 %}
+<div class="flyntComponent" is="flynt-archive-maps">
+  <div class="container">
+    {% for item in items %}
+    <div class="content">
+      <div class="acf-map" data-zoom="14" data-key="{{apiKey}}">
+        <div class="marker" data-lat="{{ item.locationProject.lat }}" data-lng="{{ item.locationProject.lng }}">
+          <article>
+            <h1>{{ item.title }}</h1>
+          </article>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %} #}
+
+<div class="flyntComponent" is="flynt-archive-maps">
+  <div class="container">
+    <div class="content">
+      <div class="acf-map" data-zoom="14" data-key="{{apiKey}}">
+        <div class="marker" data-lat="{{ maps.lat }}" data-lng="{{ maps.lng }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

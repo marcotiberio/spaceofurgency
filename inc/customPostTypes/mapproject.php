@@ -59,7 +59,7 @@ function registerMapprojectPostType()
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
     ];
-    register_post_type('mapproject', $args);
+    register_post_type('map', $args);
 }
 
 add_action('init', '\\Flynt\\CustomPostTypes\\registerMapprojectPostType');

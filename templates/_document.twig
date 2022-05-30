@@ -12,7 +12,7 @@
       {{ __("Skip to main content", "flynt") }}
     </a>
     {% block layout %}
-      <div class="pageWrapper">
+      <div class="pageWrapper" style="--pageBackground: {{ post.pageBackground }};">
         <header class="mainHeader">
           {% block header %}
             {{ renderComponent('NavigationMain') }}

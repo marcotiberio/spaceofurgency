@@ -2,9 +2,9 @@
   <div class="flyntComponent {{ options.theme }}" is="flynt-grid-projects-latest">
     <div class="container">
       {% if preContentHtml %}
-        <div class="preContent">
+        <h3 class="preContent">
           {{ preContentHtml|e('wp_kses_post') }}
-        </div>
+        </h3>
       {% endif %}
       <ul class="grid">
         {% for item in items %}
@@ -26,7 +26,7 @@
                   data-sizes="auto"
                   alt="{{ item.thumbnail.alt|e }}">
                 <div class="content-inner">
-                  <h3 class="content-title">{{ item.title }}</h3>
+                  <h2 class="content-title">{{ item.title }}</h2>
                   <p class="content-excerpt">{{ item.introHtml|e('wp_kses_post')|excerpt(18) }}</p>
                 </div>
               </a>

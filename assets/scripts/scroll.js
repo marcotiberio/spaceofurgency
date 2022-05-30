@@ -2,7 +2,7 @@ import $ from 'jquery'
 
 $(document).ready(function () {
   var headerHeight = $('header').outerHeight() // Target your header navigation here
-  $('.menu-submenu li a').click(function (e) {
+  $('a').click(function (e) {
     var targetHref = $(this).attr('href')
 
     targetHref = targetHref.substring(targetHref.indexOf('#'))

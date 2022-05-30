@@ -21,7 +21,7 @@ add_filter('Flynt/addComponentData?name=GridPostsEventsUpcoming', function ($dat
         'category' => join(',', array_map(function ($taxonomy) {
             return $taxonomy->term_id;
         }, $data['taxonomies'])),
-        'posts_per_page'    => 1,
+        'posts_per_page'    => 3,
         'meta_key'          => 'end_date',
         'orderby'           => 'meta_value',
         'order'             => 'ASC',

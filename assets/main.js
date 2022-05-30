@@ -5,6 +5,7 @@ import './main.scss'
 import './scripts/scroll.js'
 import $ from 'jquery'
 import feather from 'feather-icons'
+import { appendMaps, initMap } from './scripts/map.js'
 import smoothscroll from 'smoothscroll-polyfill'
 
 import installCE from 'document-register-element/pony'
@@ -19,6 +20,8 @@ $(document).ready(function () {
   feather.replace({
     'stroke-width': 1
   })
+  global.initMap = initMap
+  appendMaps()
 })
 
 installCE(window, {

@@ -24,7 +24,7 @@ add_filter('Flynt/addComponentData?name=GridPostsEventsPast', function ($data) {
         'posts_per_page' => intval($data['options']['columns']) * 5,
         'meta_key'          => 'end_date',
         'orderby'           => 'meta_value',
-        'order'             => 'ASC',
+        'order'             => 'DESC',
         'meta_query'        => array(
             array(
                 'key'           => 'end_date',
@@ -57,11 +57,7 @@ function getACFLayout()
             [
                 'label' => __('Title', 'flynt'),
                 'name' => 'preContentHtml',
-                'type' => 'wysiwyg',
-                'tabs' => 'visual,text',
-                'media_upload' => 0,
-                'delay' => 1,
-                'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
+                'type' => 'text',
             ],
             [
                 'label' => __('Categories', 'flynt'),
@@ -91,20 +87,6 @@ function getACFLayout()
                 'layout' => 'row',
                 'sub_fields' => [
                     FieldVariables\getTheme(),
-                    FieldVariables\getColorBrandBackground(),
-                    FieldVariables\getColorBrandText(),
-                    FieldVariables\getMaxWidthContainer(),
-                    FieldVariables\getPaddingTopBottom(),
-                    FieldVariables\getPaddingLeftRight(),
-                    [
-                        'label' => __('Columns', 'flynt'),
-                        'name' => 'columns',
-                        'type' => 'number',
-                        'default_value' => 5,
-                        'min' => 1,
-                        'max' => 5,
-                        'step' => 1
-                    ]
                 ]
             ],
         ]

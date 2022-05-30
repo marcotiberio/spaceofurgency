@@ -2,23 +2,35 @@
 
 {% block content %}
   <article class="post">
-    <header class="post-header componentSpacing">
-      <h1>{{ post.title }}</h1>
-      {% if post.introHtml %}
-        <div class="intro">{{ post.introHtml|e('wp_kses_post') }}</div>
-      {% endif %}
-      {% if post.yearProject or partnerProject %}
-        <div class="meta">
-          <div>
-          <span>Year</span>
-          <span>{{ post.yearProject|e('wp_kses_post') }}</span>
-          </div>
-          <div>
-          <span>Partner</span>
-          <span>{{ post.partnerProject|e('wp_kses_post') }}</span>
+    <section class="post-map">
+      <div class="content">
+        <div class="acf-map" data-zoom="14" data-key="AIzaSyDk5541gq_jV25sRiAhVjikP_PGsWkE3yg">
+          <div class="marker" data-lat="{{ post.location.lat }}" data-lng="{{ post.location.lng }}">
           </div>
         </div>
-      {% endif %}
+      </div>
+    </section>
+    <header class="post-header componentSpacing">
+      <div class="left">
+        <h1 class="title">{{ post.title }}</h1>
+        {% if post.yearProject or partnerProject %}
+          <div class="meta">
+            <div>
+            <span>Year</span>
+            <span>{{ post.yearProject|e('wp_kses_post') }}</span>
+            </div>
+            <div>
+            <span>Partner</span>
+            <span>{{ post.partnerProject|e('wp_kses_post') }}</span>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+      <div class="right">
+        {% if post.introHtml %}
+          <div class="intro">{{ post.introHtml|e('wp_kses_post') }}</div>
+        {% endif %}
+      </div>
     </header>
     {% if post.thumbnail %}
     <div class="post-featuredImage componentSpacing">

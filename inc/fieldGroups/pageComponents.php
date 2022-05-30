@@ -5,6 +5,36 @@ use Flynt\Components;
 
 add_action('Flynt/afterRegisterComponents', function () {
     ACFComposer::registerFieldGroup([
+        'name' => 'pageMeta',
+        'title' => 'Page Meta',
+        'style' => '',
+        'fields' => [
+            [
+                'label' => __('Page Options', 'flynt'),
+                'name' => 'optionsTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0
+            ],
+            [
+                'label' => __('Page Background', 'flynt'),
+                'name' => 'pageBackground',
+                'type' => 'color_picker'
+            ]
+        ],
+        'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '!=',
+                    'value' => 'post'
+                ],
+            ],
+        ],
+        'menu_order' => 0,
+        'position' => 'side',
+    ]);
+    ACFComposer::registerFieldGroup([
         'name' => 'pageComponents',
         'title' => 'Page Components',
         'style' => 'seamless',
@@ -15,12 +45,15 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
+                    Components\ArchiveMaps\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockPageIntro\getACFLayout(),
+                    Components\BlockQuote\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\GridImageText\getACFLayout(),
+                    Components\GridPostsEventsPast\getACFLayout(),
                     Components\GridPostsEventsUpcoming\getACFLayout(),
                     Components\GridPostsLatest\getACFLayout(),
                     Components\GridProjectsLatest\getACFLayout(),

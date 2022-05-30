@@ -6,7 +6,7 @@ use Flynt\Components;
 add_action('Flynt/afterRegisterComponents', function () {
     ACFComposer::registerFieldGroup([
         'name' => 'mapprojectMeta',
-        'title' => 'Map Project Meta',
+        'title' => 'Info',
         'style' => '',
         'menu_order' => 1,
         'position' => 'acf_after_title',
@@ -44,6 +44,23 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'wrapper' => [
                     'width' => '50',
                 ]
+            ],
+            [
+                'label' => __('Location', 'flynt'),
+                'name' => 'mapsTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0
+            ],
+            [
+                'label' => __('Maps', 'flynt'),
+                'name' => 'maps',
+                'type' => 'google_map',
+                'center_lat' => '52.50384',
+                'center_lng' => '13.38421',
+                'wrapper' => [
+                    'width' => 100,
+                ],
             ]
         ],
         'location' => [
@@ -51,7 +68,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 [
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'mapproject',
+                    'value' => 'map',
                 ],
             ],
         ],
@@ -69,7 +86,9 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
-                    Components\BlockImageText\getACFLayout(),
+                    Components\BlockImageTextPost\getACFLayout(),
+                    Components\BlockMaps\getACFLayout(),
+                    Components\BlockQuote\getACFLayout(),
                     Components\BlockSoundcloudOembed\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwygPost\getACFLayout(),
@@ -82,7 +101,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 [
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'mapproject',
+                    'value' => 'map',
                 ],
             ],
         ],

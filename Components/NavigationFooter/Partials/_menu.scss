@@ -1,25 +1,24 @@
 .menu {
+  align-items: flex-start;
   display: flex;
-  justify-content: center;
+  flex-flow: column wrap;
+  justify-content: flex-start;
   list-style: none;
   margin: 0;
   padding: 0;
 
   &-item {
-    &:not(:first-child) {
-      margin-left: 2rem;
-    }
+    padding-bottom: $spacing-small;
   }
 
   &-link {
-    color: currentColor;
-    font-weight: 15px;
+    color: $white;
     text-decoration: none;
     text-transform: uppercase;
 
     &:hover,
     &:focus {
-      color: $color-text;
+      color: $white;
       text-decoration: underline;
       text-underline-offset: 3px;
     }

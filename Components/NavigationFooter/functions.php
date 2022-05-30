@@ -84,5 +84,67 @@ Options::addTranslatable('NavigationFooter', [
             ]
         ]
     ],
+    [
+        'label' => __('Social Media', 'flynt'),
+        'name' => 'socialmediaTab',
+        'type' => 'tab',
+        'placement' => 'top',
+        'endpoint' => 0
+    ],
+    [
+        'label' => __('Title', 'flynt'),
+        'name' => 'listSocialmediaTitle',
+        'type' => 'text',
+    ],
+    [
+        'label' => __('Social Media', 'flynt'),
+        'name' => 'repeaterSocial',
+        'type' => 'repeater',
+        'layout' => 'row',
+        'min' => 1,
+        'button_label' => __('Add Social Media', 'flynt'),
+        'sub_fields' => [
+            [
+                'label' => __('Social Media', 'flynt'),
+                'name' => 'panelLink',
+                'type' => 'link',
+                'return_format' => 'array',
+                'wrapper' => [
+                    'width' => '100',
+                ],
+            ],
+        ],
+    ],
+    [
+        'label' => __('Donate', 'flynt'),
+        'name' => 'donateTab',
+        'type' => 'tab',
+        'placement' => 'top',
+        'endpoint' => 0
+    ],
+    [
+        'label' => __('Title', 'flynt'),
+        'name' => 'listDonateTitle',
+        'type' => 'text',
+    ],
+    [
+        'label' => __('Donate', 'flynt'),
+        'name' => 'repeaterDonate',
+        'type' => 'repeater',
+        'layout' => 'row',
+        'min' => 1,
+        'button_label' => __('Add Donate Link', 'flynt'),
+        'sub_fields' => [
+            [
+                'label' => __('Donate Link', 'flynt'),
+                'name' => 'panelLink',
+                'type' => 'link',
+                'return_format' => 'array',
+                'wrapper' => [
+                    'width' => '100',
+                ],
+            ],
+        ],
+    ],
     Shortcodes\getShortcodeReference(),
 ]);

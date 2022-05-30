@@ -22,6 +22,7 @@ function getTheme()
             'themePurple' => __('Purple', 'flynt'),
             'themeWhite' => __('White', 'flynt'),
             'themeBlack' => __('Black', 'flynt'),
+            'themeGrey' => __('Grey', 'flynt'),
         ]
     ];
 }

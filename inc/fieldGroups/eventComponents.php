@@ -46,6 +46,22 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'return_format' => 'Ymd',
                 'first_day' => 1,
             ],
+            [
+                'label' => 'Where',
+                'name' => 'postWhere',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => '50',
+                ]
+            ],
+            [
+                'label' => 'What',
+                'name' => 'postWhat',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => '50',
+                ]
+            ],
         ],
         'location' => [
             [
@@ -71,6 +87,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
+                    Components\BlockQuote\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\SliderImages\getACFLayout(),

@@ -5,6 +5,7 @@
   }
 
   .box {
+    align-items: flex-end;
     column-gap: $gap;
     display: grid;
     grid-auto-flow: dense;
@@ -12,25 +13,25 @@
 
     &--imageLeft {
       .box-inner--image {
-        grid-column-end: 9;
+        grid-column-end: 7;
         grid-column-start: 1;
       }
 
       .box-inner--content {
         grid-column-end: 13;
-        grid-column-start: 9;
+        grid-column-start: 7;
       }
     }
 
     &--imageRight {
       .box-inner--content {
-        grid-column-end: 4;
+        grid-column-end: 7;
         grid-column-start: 1;
       }
 
       .box-inner--image {
         grid-column-end: 13;
-        grid-column-start: 4;
+        grid-column-start: 7;
       }
     }
   }
