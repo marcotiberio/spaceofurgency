@@ -5,8 +5,8 @@ use Flynt\Components;
 
 add_action('Flynt/afterRegisterComponents', function () {
     ACFComposer::registerFieldGroup([
-        'name' => 'projectMeta',
-        'title' => 'Project Meta',
+        'name' => 'resourceMeta',
+        'title' => 'Info',
         'style' => '',
         'menu_order' => 1,
         'position' => 'acf_after_title',
@@ -24,7 +24,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'wysiwyg',
                 'delay' => 1,
                 'media_upload' => 0,
-                'required' => 1,
+                'required' => 0,
                 'wrapper' => [
                     'width' => '100',
                 ]
@@ -52,32 +52,33 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'wrapper' => [
                     'width' => '33',
                 ]
-            ],
+            ]
         ],
         'location' => [
             [
                 [
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'project',
+                    'value' => 'resource',
                 ],
             ],
         ],
     ]);
     ACFComposer::registerFieldGroup([
-        'name' => 'projectComponents',
-        'title' => 'Project Components',
+        'name' => 'resourceComponents',
+        'title' => 'Resource Components',
         'style' => 'seamless',
         'fields' => [
             [
-                'name' => 'projectComponents',
-                'label' => __('Project Components', 'flynt'),
+                'name' => 'resourceComponents',
+                'label' => __('Resource Components', 'flynt'),
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
-                    Components\BlockImageText\getACFLayout(),
+                    Components\BlockImageTextPost\getACFLayout(),
+                    Components\BlockMaps\getACFLayout(),
                     Components\BlockCta\getACFLayout(),
                     Components\BlockSoundcloudOembed\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
@@ -91,7 +92,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 [
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'project',
+                    'value' => 'resource',
                 ],
             ],
         ],

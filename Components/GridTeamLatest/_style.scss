@@ -1,4 +1,4 @@
-[is='flynt-grid-projects-latest'] {
+[is='flynt-grid-team-latest'] {
   .container {
     grid-column-end: 13;
     grid-column-start: 1;
@@ -55,7 +55,12 @@
     }
 
     &-title {
+      margin-top: 0;
       padding: 0 $spacing-small;
+    }
+
+    &-excerpt {
+      padding: 0 $spacing-small $spacing-small;
     }
 
     &-tags {

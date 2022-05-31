@@ -3,7 +3,7 @@
   
   .container {
     grid-column-end: 13;
-    grid-column-start: 4;
+    grid-column-start: 1;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
       grid-column-end: 13;
@@ -13,7 +13,16 @@
 
   .content {
     @include reset-content-margins;
+    column-gap: $gap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     text-align: inherit;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      display: grid;
+      grid-auto-rows: auto;
+      grid-template-columns: 1fr;
+    }
 
     > :last-child {
       margin-bottom: 0;

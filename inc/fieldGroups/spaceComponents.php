@@ -34,15 +34,23 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'name' => 'yearProject',
                 'type' => 'number',
                 'wrapper' => [
-                    'width' => '50',
+                    'width' => '33',
                 ]
             ],
             [
-                'label' => __('Partner', 'flynt'),
-                'name' => 'partnerProject',
+                'label' => 'Where',
+                'name' => 'postWhere',
                 'type' => 'text',
                 'wrapper' => [
-                    'width' => '50',
+                    'width' => '33',
+                ]
+            ],
+            [
+                'label' => 'What',
+                'name' => 'postWhat',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => '33',
                 ]
             ],
             [

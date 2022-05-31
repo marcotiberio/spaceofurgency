@@ -18,12 +18,26 @@ function getACFLayout()
                 'endpoint' => 0,
             ],
             [
-                'label' => __('Content', 'flynt'),
-                'name' => 'contentHtml',
+                'label' => __('Content Left', 'flynt'),
+                'name' => 'contentleftHtml',
                 'type' => 'wysiwyg',
                 'delay' => 1,
                 'media_upload' => 0,
-                'required' => 1,
+                'required' => 0,
+                'wrapper' => [
+                    'width' => 50,
+                ],
+            ],
+            [
+                'label' => __('Content Right', 'flynt'),
+                'name' => 'contentrightHtml',
+                'type' => 'wysiwyg',
+                'delay' => 1,
+                'media_upload' => 0,
+                'required' => 0,
+                'wrapper' => [
+                    'width' => 50,
+                ],
             ],
             [
                 'label' => __('Options', 'flynt'),

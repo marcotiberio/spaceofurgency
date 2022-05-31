@@ -1,14 +1,14 @@
 <?php
 
-namespace Flynt\Components\GridProjectsLatest;
+namespace Flynt\Components\GridResourcesLatest;
 
 use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 use Timber\Timber;
 
-const POST_TYPE = 'project';
+const POST_TYPE = 'resource';
 
-add_filter('Flynt/addComponentData?name=GridProjectsLatest', function ($data) {
+add_filter('Flynt/addComponentData?name=GridResourcesLatest', function ($data) {
     $postType = POST_TYPE;
 
     $data['taxonomies'] = $data['taxonomies'] ?: [];
@@ -20,7 +20,7 @@ add_filter('Flynt/addComponentData?name=GridProjectsLatest', function ($data) {
             return $taxonomy->term_id;
         }, $data['taxonomies'])),
         'posts_per_page' => -1,
-        'ignore_sticky_posts' => 1,
+        'order'             => 'DESC',
         'post__not_in' => array(get_the_ID())
     ]);
 
@@ -32,8 +32,8 @@ add_filter('Flynt/addComponentData?name=GridProjectsLatest', function ($data) {
 function getACFLayout()
 {
     return [
-        'name' => 'GridProjectsLatest',
-        'label' => 'Grid: Projects Latest',
+        'name' => 'GridResourcesLatest',
+        'label' => 'Grid: Resources',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),
@@ -75,22 +75,13 @@ function getACFLayout()
                 'layout' => 'row',
                 'sub_fields' => [
                     FieldVariables\getTheme(),
-                    // [
-                    //     'label' => __('Columns', 'flynt'),
-                    //     'name' => 'columns',
-                    //     'type' => 'number',
-                    //     'default_value' => 3,
-                    //     'min' => 1,
-                    //     'max' => 6,
-                    //     'step' => 1
-                    // ]
                 ]
             ],
         ]
     ];
 }
 
-Options::addTranslatable('GridProjectsLatest', [
+Options::addTranslatable('GridResourcesLatest', [
     [
         'label' => __('Labels', 'flynt'),
         'name' => 'labelsTab',

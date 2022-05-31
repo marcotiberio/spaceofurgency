@@ -1,14 +1,14 @@
 <?php
 
-namespace Flynt\Components\GridProjectsLatest;
+namespace Flynt\Components\GridTeamLatest;
 
 use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 use Timber\Timber;
 
-const POST_TYPE = 'project';
+const POST_TYPE = 'team';
 
-add_filter('Flynt/addComponentData?name=GridProjectsLatest', function ($data) {
+add_filter('Flynt/addComponentData?name=GridTeamLatest', function ($data) {
     $postType = POST_TYPE;
 
     $data['taxonomies'] = $data['taxonomies'] ?: [];
@@ -32,8 +32,8 @@ add_filter('Flynt/addComponentData?name=GridProjectsLatest', function ($data) {
 function getACFLayout()
 {
     return [
-        'name' => 'GridProjectsLatest',
-        'label' => 'Grid: Projects Latest',
+        'name' => 'GridTeamLatest',
+        'label' => 'Grid: Team',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),
@@ -75,22 +75,13 @@ function getACFLayout()
                 'layout' => 'row',
                 'sub_fields' => [
                     FieldVariables\getTheme(),
-                    // [
-                    //     'label' => __('Columns', 'flynt'),
-                    //     'name' => 'columns',
-                    //     'type' => 'number',
-                    //     'default_value' => 3,
-                    //     'min' => 1,
-                    //     'max' => 6,
-                    //     'step' => 1
-                    // ]
                 ]
             ],
         ]
     ];
 }
 
-Options::addTranslatable('GridProjectsLatest', [
+Options::addTranslatable('GridTeamLatest', [
     [
         'label' => __('Labels', 'flynt'),
         'name' => 'labelsTab',

@@ -1,5 +1,5 @@
 [is='flynt-hero-video'] {
-  background-color: $orange;
+  background-color: $black;
   padding: 0 !important;
 
   .video {
@@ -66,7 +66,7 @@
     }
 
     &-overlay {
-      color: $orange;
+      color: $white;
       display: flex;
       flex-flow: column;
       height: 100%;

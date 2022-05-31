@@ -10,6 +10,7 @@
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(12, 1fr);
+    row-gap: $gap;
 
     &--imageLeft {
       .box-inner--image {
@@ -54,6 +55,13 @@
         }
       }
     }
+  }
+
+  .box-inner--link {
+    border-top: 1px solid $white;
+    line-height: 1 !important;
+    padding-top: 9px;
+    width: fit-content;
   }
 
   .figure {

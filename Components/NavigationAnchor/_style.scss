@@ -1,0 +1,48 @@
+[is='flynt-navigation-anchor'] {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  border-bottom: 1px solid $white;
+  left: 0;
+  padding: 0 $spacing-small !important;
+  position: fixed !important;
+  top: 70px;
+  width: 100%;
+  z-index: 10000;
+
+  .list {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    grid-column-end: 13;
+    grid-column-start: 1;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    .panel {
+      border-right: 1px solid $white;
+      flex-grow: 1;
+      padding: $spacing-small/2 0;
+      text-align: center;
+
+      &:last-child {
+        border-right: 0;
+      }
+      
+      a {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+          color: $white;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+      }
+    }
+  }
+}

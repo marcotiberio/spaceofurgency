@@ -38,20 +38,11 @@ function getACFLayout()
         'sub_fields' => [
             [
                 'label' => __('Map', 'flynt'),
-                'name' => 'mapsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => __('Maps', 'flynt'),
-                'name' => 'maps',
-                'type' => 'google_map',
-                'center_lat' => '52.50384',
-                'center_lng' => '13.38421',
-                'wrapper' => [
-                    'width' => 100,
-                ],
+                'name' => 'shortcodeMap',
+                'type' => 'wysiwyg',
+                'tabs' => 'visual',
+                'media_upload' => 0,
+                'delay' => 0,
             ]
         ]
     ];

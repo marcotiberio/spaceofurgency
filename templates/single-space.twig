@@ -13,15 +13,19 @@
     <header class="post-header componentSpacing">
       <div class="left">
         <h1 class="title">{{ post.title }}</h1>
-        {% if post.yearProject or partnerProject %}
+        {% if post.yearProject or post.postWhere or post.postWhat %}
           <div class="meta">
             <div>
-            <span>Year</span>
-            <span>{{ post.yearProject|e('wp_kses_post') }}</span>
+              <span>Date</span>
+              <span>{{ post.yearProject|e('wp_kses_post') }}</span>
             </div>
             <div>
-            <span>Partner</span>
-            <span>{{ post.partnerProject|e('wp_kses_post') }}</span>
+              <span>Where</span>
+              <span>{{ post.postWhere|e('wp_kses_post') }}</span>
+            </div>
+            <div>
+              <span>What</span>
+              <span>{{ post.postWhat|e('wp_kses_post') }}</span>
             </div>
           </div>
         {% endif %}

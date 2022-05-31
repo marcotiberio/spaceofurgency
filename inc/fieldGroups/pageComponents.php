@@ -57,6 +57,8 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\GridPostsEventsUpcoming\getACFLayout(),
                     Components\GridPostsLatest\getACFLayout(),
                     Components\GridProjectsLatest\getACFLayout(),
+                    Components\GridTeamLatest\getACFLayout(),
+                    Components\GridResourcesLatest\getACFLayout(),
                     Components\GridExamplesLatest\getACFLayout(),
                     Components\ListComponents\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
