@@ -5,7 +5,7 @@ import 'swiper/swiper-bundle.css'
 
 Swiper.use([Navigation, A11y, Autoplay])
 
-class SliderImages extends window.HTMLDivElement {
+class SliderText extends window.HTMLDivElement {
   constructor (...args) {
     const self = super(...args)
     self.init()
@@ -45,20 +45,8 @@ class SliderImages extends window.HTMLDivElement {
       },
       a11y: options.a11y,
       // autoHeight: true,
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 0
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 30
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30
-        }
-      }
+      slidesPerView: 1,
+      spaceBetween: 0
     }
     if (options.autoplay && options.autoplaySpeed) {
       config.autoplay = {
@@ -69,4 +57,4 @@ class SliderImages extends window.HTMLDivElement {
   }
 }
 
-window.customElements.define('flynt-slider-images', SliderImages, { extends: 'div' })
+window.customElements.define('flynt-slider-text', SliderText, { extends: 'div' })

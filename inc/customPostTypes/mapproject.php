@@ -8,13 +8,13 @@
 
 namespace Flynt\CustomPostTypes;
 
-function registerMapprojectPostType()
+function registerSpacePostType()
 {
     $labels = [
-        'name'                  => _x('Map Projects', 'Post Type General Name', 'flynt'),
-        'singular_name'         => _x('Map Project', 'Post Type Singular Name', 'flynt'),
-        'menu_name'             => __('Map Projects', 'flynt'),
-        'name_admin_bar'        => __('Map Project', 'flynt'),
+        'name'                  => _x('Spaces', 'Post Type General Name', 'flynt'),
+        'singular_name'         => _x('Space', 'Post Type Singular Name', 'flynt'),
+        'menu_name'             => __('Spaces', 'flynt'),
+        'name_admin_bar'        => __('Space', 'flynt'),
         'archives'              => __('Item Archives', 'flynt'),
         'attributes'            => __('Item Attributes', 'flynt'),
         'parent_item_colon'     => __('Parent Item:', 'flynt'),
@@ -40,8 +40,8 @@ function registerMapprojectPostType()
         'filter_items_list'     => __('Filter items list', 'flynt'),
     ];
     $args = [
-        'label'                 => __('Map Project', 'flynt'),
-        'description'           => __('Map Project Description', 'flynt'),
+        'label'                 => __('Space', 'flynt'),
+        'description'           => __('Space Description', 'flynt'),
         'labels'                => $labels,
         'supports'              => ['title', 'thumbnail'],
         'taxonomies'            => ['category', 'post_tag'],
@@ -59,7 +59,7 @@ function registerMapprojectPostType()
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
     ];
-    register_post_type('map', $args);
+    register_post_type('space', $args);
 }
 
-add_action('init', '\\Flynt\\CustomPostTypes\\registerMapprojectPostType');
+add_action('init', '\\Flynt\\CustomPostTypes\\registerSpacePostType');

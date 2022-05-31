@@ -1,14 +1,14 @@
 <?php
 
-namespace Flynt\Components\BlockQuote;
+namespace Flynt\Components\BlockCta;
 
 use Flynt\FieldVariables;
 
 function getACFLayout()
 {
     return [
-        'name' => 'blockQuote',
-        'label' => 'Block: Quote',
+        'name' => 'BlockCta',
+        'label' => 'Block: CTA',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),
@@ -21,6 +21,12 @@ function getACFLayout()
                 'label' => __('Content', 'flynt'),
                 'name' => 'contentHtml',
                 'type' => 'textarea',
+            ],
+            [
+                'label' => __('CTA Link', 'flynt'),
+                'name' => 'ctaLink',
+                'type' => 'link',
+                'return_format' => 'array',
             ],
             [
                 'label' => __('Options', 'flynt'),

@@ -1,4 +1,4 @@
-[is='flynt-slider-images'] {
+[is='flynt-slider-text'] {
   .container {
     grid-column-end: 13;
     grid-column-start: 1;
@@ -9,15 +9,20 @@
     position: relative;
 
     &-item {
-      height: 0;
+      align-items: center;
+      display: flex;
+      flex-flow: column wrap;
+      height: 70vh;
+      justify-content: center;
       overflow: hidden;
       // padding-bottom: (2/3) * 100%;
-      padding-bottom: 40%;
+      // padding-bottom: 40%;
       position: relative;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
-        height: 100%;
-        padding-bottom: 0;
+      &--inner {
+        margin: 0;
+        padding: 0 30%;
+        text-align: center;
       }
     }
 
@@ -56,7 +61,7 @@
       }
 
       .feather {
-        color: $color-text;
+        color: $white;
         height: auto;
         top: 0;
         width: 80%;

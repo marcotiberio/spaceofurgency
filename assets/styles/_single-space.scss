@@ -1,6 +1,6 @@
-/* Custom styling for single map projects layouts */
+/* Custom styling for single space projects layouts */
 
-.single-map {
+.single-space {
   background-color: $black;
   color: $white;
   
@@ -30,6 +30,11 @@
       grid-column-start: 1;
       grid-template-columns: repeat(12, 1fr);
       margin-top: 160px;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        display: block;
+        padding: $spacing-large $spacing-small;
+      } 
 
       .left {
         grid-column-end: 4;

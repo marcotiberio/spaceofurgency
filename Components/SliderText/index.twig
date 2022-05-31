@@ -1,0 +1,25 @@
+<div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-slider-text">
+  <script type="application/json">{{ jsonData|json_encode }}</script>
+  <div class="container">
+    {% if preContentHtml %}
+      <div class="preContent">
+        {{ preContentHtml|e('wp_kses_post') }}
+      </div>
+    {% endif %}
+    <div data-slider class="slider swiper-container">
+      <div class="swiper-wrapper">
+        {% for text in textPanels %}
+          <div class="slider-item swiper-slide">
+            <div class="slider-item--inner h1">{{ text.contentHtml|e('wp_kses_post') }}</div>
+          </div>
+        {% endfor %}
+      </div>
+      <button type="button" data-slider-button="prev" class="slider-button slider-button--prev">
+        <i data-feather="arrow-left"></i>
+      </button>
+      <button type="button" data-slider-button="next" class="slider-button slider-button--next">
+        <i data-feather="arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</div>

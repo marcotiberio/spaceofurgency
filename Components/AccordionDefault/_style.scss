@@ -18,6 +18,11 @@
   .content {
     grid-column-end: 10;
     grid-column-start: 5;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      grid-column-end: 13;
+      grid-column-start: 1;
+    }
   }
 
   .accordion {

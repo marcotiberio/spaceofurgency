@@ -5,7 +5,7 @@ use Flynt\Components;
 
 add_action('Flynt/afterRegisterComponents', function () {
     ACFComposer::registerFieldGroup([
-        'name' => 'mapprojectMeta',
+        'name' => 'spaceMeta',
         'title' => 'Info',
         'style' => '',
         'menu_order' => 1,
@@ -68,19 +68,19 @@ add_action('Flynt/afterRegisterComponents', function () {
                 [
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'map',
+                    'value' => 'space',
                 ],
             ],
         ],
     ]);
     ACFComposer::registerFieldGroup([
-        'name' => 'mapprojectComponents',
-        'title' => 'Map Project Components',
+        'name' => 'spaceComponents',
+        'title' => 'Space Components',
         'style' => 'seamless',
         'fields' => [
             [
-                'name' => 'mapprojectComponents',
-                'label' => __('Map Project Components', 'flynt'),
+                'name' => 'spaceComponents',
+                'label' => __('Space Components', 'flynt'),
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
@@ -88,7 +88,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageTextPost\getACFLayout(),
                     Components\BlockMaps\getACFLayout(),
-                    Components\BlockQuote\getACFLayout(),
+                    Components\BlockCta\getACFLayout(),
                     Components\BlockSoundcloudOembed\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwygPost\getACFLayout(),
@@ -101,7 +101,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 [
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'map',
+                    'value' => 'space',
                 ],
             ],
         ],

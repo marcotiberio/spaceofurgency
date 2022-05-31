@@ -35,6 +35,10 @@
     display: grid;
     grid-template-columns: 6fr 2fr 2fr 2fr;
     margin-bottom: $spacing-small;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      display: none;
+    }
   }
 
   .content {
@@ -42,11 +46,30 @@
     align-items: center;
     column-gap: $gap;
     display: grid;
+    grid-auto-rows: auto;
     grid-template-columns: 6fr 2fr 2fr 2fr;
     height: 100%;
 
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      grid-template-columns: 100%;
+    }
+
+    &-link {
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        padding-bottom: $spacing-small;
+      }
+    }
+
     div {
       padding: $spacing-small 0 !important;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        padding: 0 0 $spacing-small/2 0 !important;
+
+        &:not(:first-child) {
+          text-align: right;
+        }
+      }
     }
 
     &-link {

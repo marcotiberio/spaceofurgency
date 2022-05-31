@@ -6,6 +6,14 @@
     color: $color-background;
   }
 
+  p {
+    color: $color-background-light;
+  }
+
+  a {
+    color: $color-background-light;
+  }
+
   .button {
     &:hover,
     &:focus {

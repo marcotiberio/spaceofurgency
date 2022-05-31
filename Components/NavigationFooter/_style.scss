@@ -6,7 +6,9 @@
     align-items: flex-start;
     column-gap: $gap;
     display: grid;
+    grid-auto-rows: auto;
     grid-template-columns: repeat(12, 1fr);
+    row-gap: $gap*2;
 
     &-left {
       align-items: flex-start;
@@ -15,9 +17,15 @@
       grid-column-start: 1;
       grid-template-columns: repeat(6, 1fr);
 
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        grid-column-end: 13;
+        grid-column-start: 1;
+      }
+
       .content {
         grid-column-end: 4;
         grid-column-start: 1;
+        margin: 0;
       }
 
       .repeater {
@@ -37,9 +45,19 @@
       grid-column-start: 7;
       grid-template-columns: repeat(6, 1fr);
 
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        grid-column-end: 13;
+        grid-column-start: 1;
+      }
+
       .repeater {
         grid-column-end: 4;
         grid-column-start: 2;
+
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          grid-column-end: 4;
+          grid-column-start: 1;
+        }
 
         &-title {
           color: $white;
