@@ -8,7 +8,7 @@ function getACFLayout()
 {
     return [
         'name' => 'heroImageCta',
-        'label' => 'Hero: Image CTA',
+        'label' => 'Hero: Image',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),

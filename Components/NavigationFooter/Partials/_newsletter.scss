@@ -1,0 +1,44 @@
+.newsletter {
+  color: $white;
+  
+  &-form {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &-text {
+    padding-right: $spacing-large;
+  }
+
+  &-submit {
+    display: flex;
+    width: 50%;
+
+    .your-email {
+      width: 100%;
+    }
+
+    .wpcf7-submit {
+      border-bottom: 1px solid $white;
+      border-radius: 0;
+      color: $white;
+      padding: 0 $gap;
+      transition: none;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border-left: 1px solid $white;
+        border-right: 1px solid $white;
+        border-top: 1px solid $white;
+      }
+
+      // &::before {
+      //   color: $white;
+      //   content: url('data:image/svg+xml,%3Csvg width="43" height="41" viewBox="0 0 43 41" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M33.6176 13.0957L42.2711 21.4289M42.2711 21.4289L33.6176 29.7621M42.2711 21.4289H21.5996" stroke="%23F5F0F0" stroke-miterlimit="10"/%3E%3C/svg%3E');
+      //   text-align: center;
+      // }
+    }
+  }
+}

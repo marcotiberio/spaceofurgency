@@ -22,7 +22,7 @@
         grid-column-start: 1;
       }
 
-      .content {
+      .newsletter {
         grid-column-end: 4;
         grid-column-start: 1;
         margin: 0;
@@ -92,7 +92,7 @@
   .list {
     @include reset-list;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
 
     .panel {
       padding-right: 50px;
@@ -113,4 +113,5 @@
   }
 
   @import 'Partials/menu';
+  @import 'Partials/newsletter';
 }
