@@ -1,11 +1,11 @@
 <div class="flyntComponent componentSpacing" is="flynt-slider-images">
   <script type="application/json">{{ jsonData|json_encode }}</script>
   <div class="container">
-    {% if preContentHtml %}
+    {# {% if preContentHtml %}
       <div class="preContent">
         {{ preContentHtml|e('wp_kses_post') }}
       </div>
-    {% endif %}
+    {% endif %} #}
     <div data-slider class="slider swiper-container">
       <div class="swiper-wrapper">
         {% for image in images %}

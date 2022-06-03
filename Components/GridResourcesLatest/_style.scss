@@ -1,4 +1,6 @@
 [is='flynt-grid-resources-latest'] {
+  text-transform: uppercase;
+  
   .container {
     grid-column-end: 13;
     grid-column-start: 1;
@@ -25,6 +27,10 @@
     border-top: 1px solid $white;
     width: 100%;
 
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      margin-top: $gap;
+    }
+
     &:last-child {
       border-bottom: 1px solid $white;
     }
@@ -34,7 +40,9 @@
     align-items: center;
     column-gap: $gap;
     display: grid;
+    font-family: 'Octin College', Helvetica, Arial, sans-serif;
     grid-template-columns: 6fr 2fr 2fr 2fr;
+    letter-spacing: 0.03rem;
     margin-bottom: $spacing-small;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
@@ -57,7 +65,7 @@
 
     &-link {
       @media (max-width: $breakpoint-tablet-horizontal) {
-        padding-bottom: $spacing-small;
+        padding: $spacing-small;
       }
     }
 

@@ -7,7 +7,6 @@
     column-gap: $gap;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    margin-top: 260px;
     position: relative;
 
     .flyntComponent {
@@ -17,43 +16,79 @@
       padding: $spacing-large $spacing-small;
       position: relative;
     }
+
+    &-featuredImage {
+      grid-column-end: 13;
+      grid-column-start: 1;
+      margin-bottom: 0 !important;
+      max-height: 100vh;
+      padding: 0;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   
     &-header {
-      grid-column-end: 8;
-      grid-column-start: 4;
+      align-items: flex-start;
+      display: grid;
+      grid-column-end: 13;
+      grid-column-start: 1;
+      grid-template-columns: repeat(12, 1fr);
+      margin-top: 160px;
 
-      .intro {
-        margin-bottom: $spacing-component/2;
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        display: block;
+        padding: $spacing-large $spacing-small;
       }
 
-      .meta {
-        div {
-          column-gap: $gap;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          row-gap: $gap;
+      .left {
+        font-family: 'Octin College', Helvetica, Arial, sans-serif;
+        grid-column-end: 4;
+        grid-column-start: 2;
+        letter-spacing: 0.03rem;
 
-          span {
-            text-transform: uppercase;
+        .meta {
+          div {
+            border-bottom: 1px solid $black;
+            column-gap: $gap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: $gap/2 0;
+            row-gap: $gap;
 
             &:first-child {
-              grid-column-end: 2;
-              grid-column-start: 1;
+              padding-top: 0;
             }
-
-            &:last-child {
-              grid-column-end: 5;
-              grid-column-start: 2;
+  
+            span {
+              text-transform: uppercase;
+  
+              &:first-child {
+                grid-column-end: 3;
+                grid-column-start: 1;
+              }
+  
+              &:last-child {
+                grid-column-end: 5;
+                grid-column-start: 3;
+              }
             }
           }
         }
       }
-    }
-  
-    &-featuredImage {
-      grid-column-end: 13;
-      grid-column-start: 1;
-      padding: 0 $spacing-small;
+
+      .right {
+        grid-column-end: 12;
+        grid-column-start: 7;
+
+        .intro {
+          font-size: 1.375rem;
+          line-height: 1.688rem;
+          margin-top: 7.813rem;
+        }
+      }
     }
   
     &-main {

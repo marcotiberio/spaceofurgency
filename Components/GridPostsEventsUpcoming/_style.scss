@@ -1,6 +1,7 @@
 [is='flynt-grid-posts-events-upcoming'] {
   background-color: $purple;
   padding: $spacing-large 0 !important;
+  text-transform: uppercase;
 
   .container {
     grid-column-end: 13;
@@ -61,6 +62,8 @@
       &--bottom {
         display: flex;
         flex-flow: row wrap;
+        font-family: 'Octin College', Helvetica, Arial, sans-serif;
+        letter-spacing: 0.03rem;
 
         .left {
           display: flex;

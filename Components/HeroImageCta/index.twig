@@ -1,4 +1,4 @@
-<div class="flyntComponent {{ options.fullWidth == false ? "componentSpacing #{options.theme}" : '' }} {{ options.fullWidth ? 'fullWidth' : '' }}" is="flynt-hero-image-cta">
+<div class="flyntComponent fullWidth" is="flynt-hero-image-cta">
   <div class="container">
     <div class="content-picture">
       <div class="content-background"></div>
@@ -49,9 +49,14 @@
     </div>
     <div class="content">
       <div class="content-wrapper">
-        <div class="content-html">
+        <div class="content-html h4">
           {{ contentHtml|e('wp_kses_post') }}
         </div>
+        {% if pagelink %}
+        <a href="{{ pagelink.url }}" {{ pagelink.target ? "target='#{item.link.target}' rel='noopener noreferrer'" }} class="page-link">
+          {{ pagelink.title ?: pagelink.url }}
+        </a>
+        {% endif %}
       </div>
     </div>
   </div>

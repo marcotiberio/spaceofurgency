@@ -2,28 +2,6 @@
 
 {% block content %}
   <article class="post">
-    <header class="post-header componentSpacing">
-      <h1>{{ post.title }}</h1>
-      {% if post.introHtml %}
-        <div class="intro">{{ post.introHtml|e('wp_kses_post') }}</div>
-      {% endif %}
-      {% if post.yearProject or post.postWhere or post.postWhat %}
-          <div class="meta">
-            <div>
-              <span>Date</span>
-              <span>{{ post.yearProject|e('wp_kses_post') }}</span>
-            </div>
-            <div>
-              <span>Where</span>
-              <span>{{ post.postWhere|e('wp_kses_post') }}</span>
-            </div>
-            <div>
-              <span>What</span>
-              <span>{{ post.postWhat|e('wp_kses_post') }}</span>
-            </div>
-          </div>
-        {% endif %}
-    </header>
     {% if post.thumbnail %}
     <div class="post-featuredImage componentSpacing">
       <img src="{{ post.thumbnail }}"
@@ -34,6 +12,44 @@
       {% endif %}
     </div>
     {% endif %}
+    <header class="post-header componentSpacing">
+      <div class="left">
+        <h1>{{ post.title }}</h1>
+        {% if post.yearProject or post.postWhere or post.postWhat %}
+          <div class="meta">
+            <div>
+              <span>Type</span>
+              <span>{{ post.yearType|e('wp_kses_post') }}</span>
+            </div>
+            <div>
+              <span>Methods</span>
+              <span>{{ post.postMethods|e('wp_kses_post') }}</span>
+            </div>
+            <div>
+              <span>Grant Size</span>
+              <span>{{ post.postGrantSize|e('wp_kses_post') }}</span>
+            </div>
+            <div>
+              <span>Location</span>
+              <span>{{ post.yearLocation|e('wp_kses_post') }}</span>
+            </div>
+            <div>
+              <span>Year</span>
+              <span>{{ post.postYear|e('wp_kses_post') }}</span>
+            </div>
+            <div>
+              <span>Partners</span>
+              <span>{{ post.postPartners|e('wp_kses_post') }}</span>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+      <div class="right">
+      {% if post.introHtml %}
+        <div class="intro">{{ post.introHtml|e('wp_kses_post') }}</div>
+      {% endif %}
+      </div>
+    </header>
     <section class="post-main">
       {% for component in post.meta('projectComponents') %}
         {{ renderComponent(component) }}

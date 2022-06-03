@@ -10,7 +10,7 @@
       <div class="swiper-wrapper">
         {% for text in textPanels %}
           <div class="slider-item swiper-slide">
-            <div class="slider-item--inner h1">{{ text.contentHtml|e('wp_kses_post') }}</div>
+            <div class="slider-item--inner h1Cta">{{ text.contentHtml|e('wp_kses_post') }}</div>
           </div>
         {% endfor %}
       </div>

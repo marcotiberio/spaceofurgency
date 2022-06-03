@@ -49,12 +49,13 @@ function getACFLayout()
             [
                 'label' => __('Content', 'flynt'),
                 'name' => 'contentHtml',
-                'type' => 'wysiwyg',
-                'tabs' => 'visual,text',
-                'media_upload' => 0,
-                'delay' => 1,
-                'required' => 1,
-                'instructions' => __('The content overlaying the image. Character Recommendations: Title: 30-100, Content: 80-250.', 'flynt'),
+                'type' => 'textarea',
+            ],
+            [
+                'label' => __('Link', 'flynt'),
+                'name' => 'pagelink',
+                'type' => 'link',
+                'return_format' => 'array'
             ],
             [
                 'label' => __('Options', 'flynt'),
@@ -151,13 +152,6 @@ function getACFLayout()
                                 ]
                             ],
                         ]
-                    ],
-                    [
-                        'label' => __('Full width image', 'flynt'),
-                        'name' => 'fullWidth',
-                        'type' => 'true_false',
-                        'default_value' => 0,
-                        'ui' => 1
                     ],
                 ]
             ],

@@ -34,15 +34,23 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'name' => 'yearProject',
                 'type' => 'number',
                 'wrapper' => [
-                    'width' => '33',
+                    'width' => '25',
                 ]
             ],
             [
-                'label' => 'Where',
-                'name' => 'postWhere',
+                'label' => 'City',
+                'name' => 'postCity',
                 'type' => 'text',
                 'wrapper' => [
-                    'width' => '33',
+                    'width' => '25',
+                ]
+            ],
+            [
+                'label' => 'Country',
+                'name' => 'postCountry',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => '25',
                 ]
             ],
             [
@@ -50,7 +58,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'name' => 'postWhat',
                 'type' => 'text',
                 'wrapper' => [
-                    'width' => '33',
+                    'width' => '25',
                 ]
             ],
             [

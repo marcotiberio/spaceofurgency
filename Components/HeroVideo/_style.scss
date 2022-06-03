@@ -5,8 +5,13 @@
   .video {
     grid-column-end: 13;
     grid-column-start: 1;
+    height: 100vh;
     margin: 0;
     position: relative;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      height: 70vh;
+    }
 
     .figure {
       display: block;
@@ -78,9 +83,19 @@
       width: 45%;
       z-index: 1;
 
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        width: 100%;
+      }
+
       .page-link {
+        border-top: 1px solid $white;
+        font-family: 'Octin College', Helvetica, Arial, sans-serif;
+        letter-spacing: 0.03rem;
+        margin-top: 40px;
+        padding-top: $gap/2;
         text-decoration: none;
         text-transform: uppercase;
+        width: fit-content;
       }
 
       &--alignTop {

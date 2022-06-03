@@ -5,6 +5,10 @@
     align-items: flex-start;
     display: flex;
     justify-content: flex-start;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      justify-content: space-between;
+    }
   }
 
   &-text {

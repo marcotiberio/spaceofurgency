@@ -1,5 +1,6 @@
 [is='flynt-navigation-footer'] {
   background-color: $orange;
+  font-family: 'Octin College', Helvetica, Arial, sans-serif;
   padding: $spacing-large $spacing-small;
 
   .container {
@@ -18,19 +19,31 @@
       grid-template-columns: repeat(6, 1fr);
 
       @media (max-width: $breakpoint-tablet-horizontal) {
+        grid-auto-rows: auto;
         grid-column-end: 13;
         grid-column-start: 1;
+        row-gap: $gap*2;
       }
 
       .newsletter {
         grid-column-end: 4;
         grid-column-start: 1;
         margin: 0;
+
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          grid-column-end: 7;
+          grid-column-start: 1;
+        }
       }
 
       .repeater {
         grid-column-end: 5;
         grid-column-start: 7;
+
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          grid-column-end: 7;
+          grid-column-start: 1;
+        }
 
         &-title {
           color: $white;

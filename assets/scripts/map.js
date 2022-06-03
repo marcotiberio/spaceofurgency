@@ -221,41 +221,4 @@ export const initMap = () => {
       scaledSize: new google.maps.Size(10, 20)
     }
   })
-
-  // var archiveMap = new google.maps.Map(document.getElementsByClassName('acf-map-archive')[0], {
-  //   styles: mapStyle,
-  //   disableDefaultUI: true,
-  //   center: { lat: 43.370216, lng: 20.644 },
-  //   zoom: 4,
-  //   minZoom: 3,
-  //   restriction: {
-  //     latLngBounds: {
-  //       north: 85,
-  //       south: -85,
-  //       west: -150,
-  //       east: 150
-  //     }
-  //   }
-  // });
-  // var archiveMarker = new google.maps.Marker({
-  //   position: markerData,
-  //   map: map,
-  //   icon: {
-  //     url: '/wp-content/uploads/2022/05/markerorange-1.svg',
-  //     scaledSize: new google.maps.Size(20, 30)
-  //   }
-  // })
-
-  // if ($('.acf-map').length != 0) {
-  //     var map = new google.maps.Map(document.getElementsByClassName('acf-map')[0], {
-  //         center: markerData,
-  //         zoom: mapData.zoom || 14,
-  //         styles: mapStyle,
-  //         disableDefaultUI: true
-  //     });
-  //     var marker = new google.maps.Marker({
-  //         position: markerData,
-  //         map: map,
-  //     });
-  // }
 }

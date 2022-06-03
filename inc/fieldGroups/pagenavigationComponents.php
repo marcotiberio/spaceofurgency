@@ -24,9 +24,23 @@ add_action('Flynt/afterRegisterComponents', function () {
             [
                 [
                     'param' => 'page',
-                    'operator' => '!=',
-                    'value' => '11'
-                ]
+                    'operator' => '==',
+                    'value' => '16',
+                ],
+            ],
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'space',
+                ],
+            ],
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'project',
+                ],
             ]
         ]
     ]);

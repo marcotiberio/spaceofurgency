@@ -1,7 +1,7 @@
-<div class="flyntComponent {{ options.theme }}" is="flynt-block-cta">
+<div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-block-cta">
   <div class="container">
     <div class="content">
-      <h1>{{ contentHtml|e('wp_kses_post') }}</h1>
+      <div class="h1Cta">{{ contentHtml|e('wp_kses_post') }}</div>
     </div>
     <a href="{{ ctaLink.url }}" class="cta-link">{{ ctaLink.title }}</a>
   </div>

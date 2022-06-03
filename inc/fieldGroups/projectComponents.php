@@ -30,6 +30,38 @@ add_action('Flynt/afterRegisterComponents', function () {
                 ]
             ],
             [
+                'label' => 'Type',
+                'name' => 'postType',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => '33',
+                ]
+            ],
+            [
+                'label' => 'Methods',
+                'name' => 'postMethods',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => '33',
+                ]
+            ],
+            [
+                'label' => 'Grant Size',
+                'name' => 'postGrantSize',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => '33',
+                ]
+            ],
+            [
+                'label' => 'Location',
+                'name' => 'postLocation',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => '33',
+                ]
+            ],
+            [
                 'label' => __('Year', 'flynt'),
                 'name' => 'yearProject',
                 'type' => 'number',
@@ -38,16 +70,8 @@ add_action('Flynt/afterRegisterComponents', function () {
                 ]
             ],
             [
-                'label' => 'Where',
-                'name' => 'postWhere',
-                'type' => 'text',
-                'wrapper' => [
-                    'width' => '33',
-                ]
-            ],
-            [
-                'label' => 'What',
-                'name' => 'postWhat',
+                'label' => 'Partners',
+                'name' => 'postPartners',
                 'type' => 'text',
                 'wrapper' => [
                     'width' => '33',

@@ -4,19 +4,20 @@
 * Top level styles every element should inherit.
 */
 
-@include font-face('Octin', 'octinCollegeRegular', '400', 'normal');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+@include font-face('Founders Grotesk', 'FoundersGroteskRegular', '400', 'normal');
+@include font-face('Druk', 'DrukTextMedium', '500', 'normal');
+@include font-face('Octin College', 'OctinCollegeRegular', '400', 'normal');
+@include font-face('Octin Spraypaint', 'OctinSpraypaintRegular', '400', 'normal');
 
 html {
   background-color: $color-background;
   box-sizing: border-box;
   color: $color-text;
-  font-family: 'Octin', Helvetica, Arial, sans-serif;
+  font-family: 'Founders Grotesk', Helvetica, Arial, sans-serif;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
-  line-height: 1.605;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -59,8 +60,9 @@ body {
 
 h1,
 .h1 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Druk', Helvetica, Arial, sans-serif;
   font-size: 4.063rem;
+  letter-spacing: -0.01rem;
   line-height: 3.75rem;
   margin-bottom: 3.75rem;
   margin-top: 0;
@@ -70,25 +72,53 @@ h1,
   }
 }
 
+.h1Cta {
+  font-family: 'Octin College', Helvetica, Arial, sans-serif;
+  font-size: 4.063rem;
+  letter-spacing: -0.01rem;
+  line-height: 4.263rem;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+
 h2,
 .h2 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Druk', Helvetica, Arial, sans-serif;
   font-size: 2.188rem;
   line-height: 2.188rem;
 
-  @media (min-width: $breakpoint-mobile-horizontal) {
+  @media (max-width: $breakpoint-mobile-horizontal) {
     font-size: 2.188rem;
   }
 }
 
 h3,
 .h3 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Octin College', Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
+  letter-spacing: 0.03rem;
   padding-top: 1rem;
 
-  @media (min-width: $breakpoint-mobile-horizontal) {
+  @media (max-width: $breakpoint-mobile-horizontal) {
     font-size: 1.25rem;
+  }
+}
+
+h4,
+.h4 {
+  font-family: 'Octin College', Helvetica, Arial, sans-serif;
+  font-size: 2.188rem;
+  line-height: 2.5rem;
+  padding-top: 1rem;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    font-size: 1.25rem;
+    line-height: 1.825rem;
   }
 }
 
@@ -107,8 +137,9 @@ p,
 .paragraph,
 table,
 figure {
-  font-size: 1.25rem;
-  margin: 0 0 1.2rem;
+  font-size: 1.375rem;
+  line-height: 1.688rem;
+  margin: 0 0 1.375rem;
 }
 
 hr {
@@ -584,27 +615,27 @@ select {
   position: relative;
 }
 
-// .componentSpacing {
-//   margin-bottom: $spacing-component;
+.componentSpacing {
+  padding-bottom: $spacing-component;
 
-//   @media (min-width: $breakpoint-tablet) {
-//     margin-bottom: $spacing-component;
-//   }
+  @media (min-width: $breakpoint-tablet) {
+    padding-bottom: $spacing-component;
+  }
 
-//   @media (min-width: $breakpoint-desktop) {
-//     margin-bottom: $spacing-component;
-//   }
-// }
+  @media (min-width: $breakpoint-desktop) {
+    padding-bottom: $spacing-component;
+  }
+}
 
-// > .componentSpacing {
-//   &:first-child {
-//     margin-top: $spacing-component;
-//   }
+> .componentSpacing {
+  &:first-child {
+    padding-top: $spacing-component;
+  }
 
-//   &:last-child {
-//     margin-bottom: 0;
-//   }
-// }
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
 
 .centerMaxWidthContainer {
   @include center;

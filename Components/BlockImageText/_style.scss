@@ -59,8 +59,12 @@
 
   .box-inner--link {
     border-top: 1px solid $white;
+    font-family: 'Octin College', Helvetica, Arial, sans-serif;
+    letter-spacing: 0.03rem;
     line-height: 1 !important;
     padding-top: 9px;
+    text-decoration: none;
+    text-transform: uppercase;
     width: fit-content;
   }
 

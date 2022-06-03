@@ -1,4 +1,6 @@
 [is='flynt-grid-posts-events-past'] {
+  text-transform: uppercase;
+  
   .container {
     grid-column-end: 13;
     grid-column-start: 1;
@@ -24,6 +26,10 @@
   .grid-item {
     border-top: 1px solid $white;
     width: 100%;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      margin-top: $gap;
+    }
 
     &:last-child {
       border-bottom: 1px solid $white;
@@ -57,7 +63,7 @@
 
     &-link {
       @media (max-width: $breakpoint-tablet-horizontal) {
-        padding-bottom: $spacing-small;
+        padding: $spacing-small;
       }
     }
 

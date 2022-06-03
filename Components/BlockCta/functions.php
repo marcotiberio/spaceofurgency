@@ -20,7 +20,10 @@ function getACFLayout()
             [
                 'label' => __('Content', 'flynt'),
                 'name' => 'contentHtml',
-                'type' => 'textarea',
+                'type' => 'wysiwyg',
+                'tabs' => 'visual',
+                'media_upload' => 0,
+                'delay' => 1,
             ],
             [
                 'label' => __('CTA Link', 'flynt'),

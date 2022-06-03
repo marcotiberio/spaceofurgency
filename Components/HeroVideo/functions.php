@@ -79,15 +79,13 @@ function getACFLayout()
             [
                 'label' => __('Content', 'flynt'),
                 'name' => 'contentHtml',
-                'type' => 'wysiwyg',
-                'tabs' => 'visual',
-                'media_upload' => 0,
-                'delay' => 1,
+                'type' => 'textarea',
             ],
             [
                 'label' => __('Link', 'flynt'),
                 'name' => 'pagelink',
                 'type' => 'link',
+                'return_format' => 'array'
             ],
         ]
     ];

@@ -2,12 +2,19 @@
   backdrop-filter: blur(8px);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   border-bottom: 1px solid $white;
+  border-top: 1px solid $white;
   left: 0;
   padding: 0 $spacing-small !important;
   position: fixed !important;
-  top: 70px;
+  top: 59px;
   width: 100%;
   z-index: 10000;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    border-bottom: 0;
+    padding: 0 !important;
+    top: 45px;
+  }
 
   .list {
     align-items: center;
@@ -27,12 +34,22 @@
       padding: $spacing-small/2 0;
       text-align: center;
 
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        border-bottom: 1px solid $white;
+        width: 33%;
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+
       &:last-child {
         border-right: 0;
       }
       
       a {
         color: $white;
+        font-family: 'Octin College', Helvetica, Arial, sans-serif;
         text-decoration: none;
         text-transform: uppercase;
 

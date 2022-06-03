@@ -26,13 +26,13 @@ function getACFLayout()
                 'placement' => 'top',
                 'endpoint' => 0
             ],
-            [
-                'label' => __('Title', 'flynt'),
-                'name' => 'preContentHtml',
-                'type' => 'wysiwyg',
-                'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
-                'media_upload' => 0,
-            ],
+            // [
+            //     'label' => __('Title', 'flynt'),
+            //     'name' => 'preContentHtml',
+            //     'type' => 'wysiwyg',
+            //     'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
+            //     'media_upload' => 0,
+            // ],
             [
                 'label' => __('Images', 'flynt'),
                 'name' => 'images',
