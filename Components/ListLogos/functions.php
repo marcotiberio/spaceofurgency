@@ -34,10 +34,20 @@ function getACFLayout()
             [
                 'label' => __('Title', 'flynt'),
                 'name' => 'preContentHtml',
-                'type' => 'wysiwyg',
-                'tabs' => 'visual',
-                'media_upload' => 0,
-                'delay' => 0,
+                'type' => 'textarea'
+            ],
+            [
+                'label' => __('Link', 'flynt'),
+                'name' => 'pagelink',
+                'type' => 'link',
+                'return_format' => 'array'
+            ],
+            [
+                'label' => __('Logos', 'flynt'),
+                'name' => 'logosTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
             ],
             [
                 'label' => __('Logos', 'flynt'),

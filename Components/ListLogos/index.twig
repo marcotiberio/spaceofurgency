@@ -1,10 +1,13 @@
 <div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-list-logos">
   <div class="container">
-    {% if preContentHtml %}
       <div class="preContent">
-        {{ preContentHtml|e('wp_kses_post') }}
+        <h3>{{ preContentHtml|e('wp_kses_post') }}</h3>
       </div>
-    {% endif %}
+        {% if pagelink %}
+        <a href="{{ pagelink.url }}" {{ pagelink.target ? "target='#{item.link.target}' rel='noopener noreferrer'" }} class="page-link">
+          {{ pagelink.title ?: pagelink.url }}
+        </a>
+        {% endif %}
     <div class="content">
       <ul class="list">
         {% for item in items %}

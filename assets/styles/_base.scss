@@ -100,13 +100,10 @@ h2,
 h3,
 .h3 {
   font-family: 'Octin College', Helvetica, Arial, sans-serif;
-  font-size: 1.125rem;
+  font-size: 0.938rem;
   letter-spacing: 0.03rem;
+  line-height: 1rem;
   padding-top: 1rem;
-
-  @media (max-width: $breakpoint-mobile-horizontal) {
-    font-size: 1.25rem;
-  }
 }
 
 h4,
@@ -657,12 +654,10 @@ select {
 .preContent {
   @include reset-content-margins;
   font-family: 'Octin College', Helvetica, Arial, sans-serif;
+  font-size: 0.938rem;
+  letter-spacing: 0.03rem;
   margin-bottom: 40px;
   text-transform: uppercase;
-
-  @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 1.25rem;
-  }
 }
 
 .postContent {

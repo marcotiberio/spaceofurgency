@@ -35,8 +35,10 @@
   "assets/fonts/montserrat-v14-latin-regular.woff2": "assets/fonts/montserrat-v14-latin-regular-bc3aa95dca.woff2",
   "assets/icons/check-circle.svg": "assets/icons/check-circle-98401bcdb9.svg",
   "assets/icons/spinner.svg": "assets/icons/spinner-2e5c842fc5.svg",
+  "assets/images/before.png": "assets/images/before-5b8f9ecd38.png",
+  "assets/images/before.svg": "assets/images/before-42ab9b545d.svg",
   "assets/images/markerorange-1.svg": "assets/images/markerorange-1-1a4c2da31f.svg",
-  "assets/main.css": "assets/main-b1365c13fe.css",
+  "assets/main.css": "assets/main-1af231aeaa.css",
   "assets/main.js": "assets/main-28808dea1c.js",
   "assets/main.js.LICENSE.txt": "assets/main-957f80e714.js.LICENSE.txt"
 }
