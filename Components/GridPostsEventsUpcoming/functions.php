@@ -56,7 +56,7 @@ function getACFLayout()
             ],
             [
                 'label' => __('Title', 'flynt'),
-                'name' => 'preContent',
+                'name' => 'preContentHtml',
                 'type' => 'text',
             ],
             [

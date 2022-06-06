@@ -8,12 +8,10 @@
     @include reset-list;
     column-gap: $gap;
     display: grid;
-    flex-wrap: wrap;
     grid-auto-rows: auto;
     grid-column-end: 13;
     grid-column-start: 1;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
     row-gap: $spacing-large*2;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
@@ -26,6 +24,7 @@
   }
 
   .grid-item {
+    height: 100%;
     width: 100%;
   }
 
@@ -48,19 +47,23 @@
     }
 
     &-link {
-      display: flex;
+      display: block;
       flex-direction: column;
       flex-grow: 1;
+      height: 100%;
       text-decoration: none;
     }
 
     &-title {
       padding: 0 $spacing-small;
+      text-transform: uppercase;
     }
 
     &-tags {
       border-top: 1px solid $white;
+      font-family: 'Octin College', Helvetica, Arial, sans-serif;
       padding: $spacing-small $spacing-small 0;
+      text-transform: uppercase;
 
       .tag {
         &:not(:last-child) {

@@ -218,7 +218,7 @@ export const initMap = () => {
     map: map,
     icon: {
       url: '/wp-content/uploads/2022/05/markerorange-1.svg',
-      scaledSize: new google.maps.Size(10, 20)
+      scaledSize: new google.maps.Size(25, 35)
     }
   })
 }
