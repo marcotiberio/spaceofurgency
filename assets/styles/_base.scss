@@ -603,7 +603,7 @@ select {
     column-gap: $gap;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    padding: $spacing-large $spacing-small;
+    padding: $spacing-large*2 $spacing-small;
     position: relative;
   }
 }
@@ -656,7 +656,8 @@ select {
   font-family: 'Octin College', Helvetica, Arial, sans-serif;
   font-size: 0.938rem;
   letter-spacing: 0.03rem;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
+  padding-top: 0;
   text-transform: uppercase;
 }
 

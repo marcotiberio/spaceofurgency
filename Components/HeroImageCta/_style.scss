@@ -13,6 +13,8 @@
     grid-column-start: 1;
 
     .content {
+      text-transform: uppercase;
+      
       @media (min-width: $breakpoint-tablet-horizontal) {
         width: 45%;
       }

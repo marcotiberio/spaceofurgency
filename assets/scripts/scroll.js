@@ -14,3 +14,14 @@ $(document).ready(function () {
     e.preventDefault()
   })
 })
+
+// $(document).ready(function () {
+//   $('body').hide().fadeIn(200)
+//   $('a').click(function (e) {
+//     e.preventDefault()
+//     $link = $(this).attr('href')
+//     $('body').fadeOut(500, function () {
+//       window.location = $link
+//     })
+//   })
+// })
