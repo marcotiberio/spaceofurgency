@@ -38,9 +38,12 @@
     display: flex;
 
     &-item {
-      border-left: 1px solid $white;
       border-right: 1px solid $white;
       padding: $spacing-small 0;
+
+      &:first-child {
+        border-left: 1px solid $white;
+      }
 
       &:last-child {
         border-right: 0;
@@ -58,7 +61,7 @@
     &-link {
       color: $white;
       display: inline-block;
-      font-family: 'Octin College', Helvetica, Arial, sans-serif;
+      font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
       font-size: 1.563rem;
       font-weight: 400;
       padding: 0 $spacing-large;

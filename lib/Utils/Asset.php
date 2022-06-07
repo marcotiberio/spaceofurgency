@@ -248,6 +248,12 @@ class Asset
                     $path = $options['cdn']['url'];
                 }
             }
+        } else if (
+            'editor_style' === $options['type']
+            && function_exists('add_editor_style')
+        ) {
+            add_theme_support('editor-styles');
+            add_editor_style($path);
         }
 
         if (function_exists($funcName) && $fileExists) {

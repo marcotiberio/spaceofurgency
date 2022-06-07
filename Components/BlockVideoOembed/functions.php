@@ -29,16 +29,11 @@ function getACFLayout()
                 'placement' => 'top',
                 'endpoint' => 0
             ],
-            // [
-            //     'label' => __('Video Size', 'flynt'),
-            //     'name' => 'videoSize',
-            //     'type' => 'button_group',
-            //     'choices' => [
-            //         'videoHalf' => '<i class=\'dashicons dashicons-menu-alt2\' title=\'Half-Width Video\'></i>',
-            //         'videoFull' => '<i class=\'dashicons dashicons-menu-alt3\' title=\'Full-Width Video\'></i>',
-            //     ],
-            //     'default_value' => 'videoHalf'
-            // ],
+            [
+                'label' => __('Title', 'flynt'),
+                'name' => 'preContentHtml',
+                'type' => 'text',
+            ],
             [
                 'label' => __('Poster Image', 'flynt'),
                 'name' => 'posterImage',
@@ -59,7 +54,12 @@ function getACFLayout()
                 'wrapper' => [
                     'width' => '50',
                 ],
-            ]
+            ],
+            [
+                'label' => __('Video Caption', 'flynt'),
+                'name' => 'videoCaption',
+                'type' => 'text',
+            ],
         ]
     ];
 }

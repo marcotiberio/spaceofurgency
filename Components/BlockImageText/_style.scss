@@ -5,14 +5,36 @@
   }
 
   .box {
-    align-items: flex-end;
+    align-items: flex-start;
     column-gap: $gap;
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(12, 1fr);
     row-gap: $gap;
 
-    &--imageLeft {
+    &--imageLeft.imageThird {
+      .box-inner--image {
+        grid-column-end: 9;
+        grid-column-start: 1;
+
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          grid-column-end: 13;
+          grid-column-start: 1;
+        }
+      }
+
+      .box-inner--content {
+        grid-column-end: 13;
+        grid-column-start: 9;
+
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          grid-column-end: 13;
+          grid-column-start: 1;
+        }
+      }
+    }
+
+    &--imageLeft.imageHalf {
       .box-inner--image {
         grid-column-end: 7;
         grid-column-start: 1;
@@ -34,7 +56,29 @@
       }
     }
 
-    &--imageRight {
+    &--imageRight.imageThird {
+      .box-inner--content {
+        grid-column-end: 5;
+        grid-column-start: 1;
+
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          grid-column-end: 13;
+          grid-column-start: 1;
+        }
+      }
+
+      .box-inner--image {
+        grid-column-end: 13;
+        grid-column-start: 5;
+
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          grid-column-end: 13;
+          grid-column-start: 1;
+        }
+      }
+    }
+
+    &--imageRight.imageHalf {
       .box-inner--content {
         grid-column-end: 7;
         grid-column-start: 1;
@@ -59,7 +103,7 @@
 
   .box-inner--link {
     border-top: 1px solid $white;
-    font-family: 'Octin College', Helvetica, Arial, sans-serif;
+    font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
     letter-spacing: 0.03rem;
     line-height: 1 !important;
     padding-top: 9px;
@@ -72,6 +116,7 @@
     margin: 0;
 
     &-caption {
+      max-width: 50%;
       position: absolute;
     }
   }

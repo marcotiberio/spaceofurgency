@@ -18,13 +18,34 @@ function getACFLayout()
                 'endpoint' => 0,
             ],
             [
+                'label' => __('Title', 'flynt'),
+                'name' => 'preContentHtml',
+                'type' => 'text',
+            ],
+            [
                 'label' => __('Image Position', 'flynt'),
                 'name' => 'imagePosition',
                 'type' => 'button_group',
                 'choices' => [
                     'imageLeft' => '<i class=\'dashicons dashicons-align-left\' title=\'Image on the left\'></i>',
                     'imageRight' => '<i class=\'dashicons dashicons-align-right\' title=\'Image on the right\'></i>'
-                ]
+                ],
+                'wrapper' => [
+                    'width' => 50
+                ],
+            ],
+            [
+                'label' => __('Image Size', 'flynt'),
+                'name' => 'imageSize',
+                'type' => 'button_group',
+                'choices' => [
+                    'imageThird' => '<p>1/3</p>',
+                    'imageHalf' => '<p>1/2</p>'
+                ],
+                'default_value' => 'imageThird',
+                'wrapper' => [
+                    'width' => 50
+                ],
             ],
             [
                 'label' => __('Image', 'flynt'),

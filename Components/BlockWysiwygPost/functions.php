@@ -18,6 +18,11 @@ function getACFLayout()
                 'endpoint' => 0,
             ],
             [
+                'label' => __('Title', 'flynt'),
+                'name' => 'preContentHtml',
+                'type' => 'text',
+            ],
+            [
                 'label' => __('Content Left', 'flynt'),
                 'name' => 'contentleftHtml',
                 'type' => 'wysiwyg',

@@ -1,15 +1,13 @@
 {% extends 'templates/_document.twig' %}
 
 {% block content %}
+  {% for component in post.meta('pagenavigationComponents') %}
+    {{ renderComponent(component) }}
+  {% endfor %}
   <article class="post">
-    <section class="post-map">
-      <div class="content">
-        <div class="acf-map" data-zoom="14" data-key="AIzaSyDk5541gq_jV25sRiAhVjikP_PGsWkE3yg">
-          <div class="marker" data-lat="{{ post.location.lat }}" data-lng="{{ post.location.lng }}">
-          </div>
-        </div>
-      </div>
-    </section>
+    {% for component in post.meta('spaceheaderComponents') %}
+      {{ renderComponent(component) }}
+    {% endfor %}
     <header class="post-header componentSpacing">
       <div class="left">
         <h1 class="title">{{ post.title }}</h1>

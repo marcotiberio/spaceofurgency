@@ -74,11 +74,7 @@ function getConfig()
         'blockformats' => [
             'Paragraph' => 'p',
             'Heading 1' => 'h1',
-            'Heading 2' => 'h2',
-            'Heading 3' => 'h3',
-            'Heading 4' => 'h4',
-            'Heading 5' => 'h5',
-            'Heading 6' => 'h6'
+            'Heading 2' => 'h2'
         ],
         'styleformats' => [
             [
@@ -91,28 +87,13 @@ function getConfig()
                         'selector' => '*'
                     ],
                     [
+                        'title' => 'Heading 1 Spraypaint',
+                        'classes' => 'h1Cta',
+                        'selector' => '*'
+                    ],
+                    [
                         'title' => 'Heading 2',
                         'classes' => 'h2',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 3',
-                        'classes' => 'h3',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 4',
-                        'classes' => 'h4',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 5',
-                        'classes' => 'h5',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Heading 6',
-                        'classes' => 'h6',
                         'selector' => '*'
                     ],
                 ]
@@ -159,63 +140,29 @@ function getConfig()
             'default' => [
                 [
                     'formatselect',
-                    // 'bold',
-                    // 'italic',
-                    // 'strikethrough',
-                    // 'blockquote',
-                    // '|',
-                    // 'alignleft',
-                    // 'aligncenter',
-                    // 'alignright',
-                    // 'alignjustify',
-                    // '|',
-                    // 'bullist',
-                    // 'numlist',
-                    // '|',
-                    // 'link',
-                    // 'unlink',
-                    // '|',
-                    // 'pastetext',
-                    // 'removeformat',
-                    // '|',
-                    // 'undo',
-                    // 'redo',
-                    // 'fullscreen'
-
+                    'styleselect',
                     'bold',
                     'italic',
-                    // 'strikethrough',
-                    // '|',
-                    // 'alignleft',
-                    // 'aligncenter',
-                    // 'alignright',
-                    // 'alignjustify',
-                    // '|',
+                    '|',
+                    'bullist',
+                    'numlist',
+                    '|',
                     'link',
-                    'unlink',
-                    // '|',
-                    // 'undo',
-                    // 'redo',
-                    // 'fullscreen'
+                    'unlink'
                 ]
             ],
             'basic' => [
                 [
+                    'formatselect',
+                    'styleselect',
                     'bold',
                     'italic',
-                    // 'strikethrough',
-                    // '|',
-                    // 'alignleft',
-                    // 'aligncenter',
-                    // 'alignright',
-                    // 'alignjustify',
-                    // '|',
+                    '|',
+                    'bullist',
+                    'numlist',
+                    '|',
                     'link',
-                    'unlink',
-                    // '|',
-                    // 'undo',
-                    // 'redo',
-                    // 'fullscreen'
+                    'unlink'
                 ]
             ]
         ]

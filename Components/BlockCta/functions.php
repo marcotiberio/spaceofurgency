@@ -8,7 +8,7 @@ function getACFLayout()
 {
     return [
         'name' => 'BlockCta',
-        'label' => 'Block: CTA',
+        'label' => 'Block: Quote/CTA',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),
@@ -44,7 +44,20 @@ function getACFLayout()
                 'type' => 'group',
                 'layout' => 'row',
                 'sub_fields' => [
-                    FieldVariables\getTheme(),
+                    [
+                        'label' => __('Text Size', 'flynt'),
+                        'name' => 'textSize',
+                        'type' => 'button_group',
+                        'choices' => [
+                            'textSmall' => '<i class=\'dashicons dashicons-minus\' title=\'Small\'></i>',
+                            'textBig' => '<i class=\'dashicons dashicons-plus\' title=\'Big\'></i>'
+                        ],
+                        'default' => 'textBig',
+                        'wrapper' => [
+                            'width' => 100
+                        ],
+                    ],
+                    FieldVariables\getTheme()
                 ]
             ],
         ]

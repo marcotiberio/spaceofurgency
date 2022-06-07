@@ -19,10 +19,19 @@ add_action('Flynt/afterRegisterComponents', function () {
             [
                 'label' => __('Page Background', 'flynt'),
                 'name' => 'pageBackground',
-                'type' => 'color_picker'
+                'type' => 'color_picker',
+                'default' => '#000',
+                'required' => 1
             ]
         ],
         'location' => [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page'
+                ]
+                ],
             [
                 [
                     'param' => 'post_type',

@@ -19,17 +19,35 @@
     text-align: center;
     text-transform: uppercase;
 
-    p {
-      font-family: 'Octin College', Helvetica, Arial, sans-serif;
-      font-size: 4.063rem;
-      letter-spacing: -0.01rem;
-      line-height: 4.263rem;
-      margin-bottom: 4.263rem;
-      margin-top: 0;
-
-      @media (min-width: $breakpoint-mobile-horizontal) {
-        font-size: 4.063rem;
+    &-textSmall {
+      p {
+        font-size: 2.188rem;
+        letter-spacing: -0.01rem;
+        line-height: 2.188rem;
+        margin: 0;
+        text-transform: uppercase;
+  
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          font-size: 2.188rem;
+        }
       }
+    }
+
+    &-textBig {
+      p {
+        font-size: 4.063rem;
+        letter-spacing: -0.01rem;
+        line-height: 4.263rem;
+        margin: 0;
+  
+        @media (min-width: $breakpoint-mobile-horizontal) {
+          font-size: 4.063rem;
+        }
+      }
+    }
+
+    p {
+      font-family: 'Octin College Book', Helvetica, Arial, sans-serif;
     }
 
     em {
@@ -40,7 +58,7 @@
 
   .cta-link {
     border-top: 1px solid $white;
-    font-family: 'Octin College', Helvetica, Arial, sans-serif;
+    font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
     letter-spacing: 0.03rem;
     margin-top: $spacing-component;
     padding: $spacing-small $spacing-large 0 $spacing-large;

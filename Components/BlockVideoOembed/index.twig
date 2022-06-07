@@ -1,4 +1,5 @@
-<div class="flyntComponent" is="flynt-block-video-oembed">
+<div class="flyntComponent" id="{{ preContentHtml|lower|replace({' ': ''})}}" is="flynt-block-video-oembed">
+  <div class="preContent">{{ preContentHtml|e('wp_kses_post') }}</div>
   <div class="container">
     {% include 'Partials/_video.twig' ignore missing with {video: video, videoSize: videoSize, image: posterImage} only %}
   </div>

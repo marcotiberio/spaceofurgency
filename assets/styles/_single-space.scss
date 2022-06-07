@@ -14,17 +14,18 @@
       column-gap: $gap;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      padding: $spacing-large $spacing-small;
+      padding: $spacing-large*6 $spacing-small;
       position: relative;
     }
 
-    &-map {
+    .heroVideo {
       grid-column-end: 13;
       grid-column-start: 1;
     }
   
     &-header {
       align-items: flex-start;
+      column-gap: $gap;
       display: grid;
       grid-column-end: 13;
       grid-column-start: 1;
@@ -37,8 +38,8 @@
       } 
 
       .left {
-        font-family: 'Octin College', Helvetica, Arial, sans-serif;
-        grid-column-end: 4;
+        font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
+        grid-column-end: 6;
         grid-column-start: 2;
         letter-spacing: 0.03rem;
 

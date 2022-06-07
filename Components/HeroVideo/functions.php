@@ -61,21 +61,6 @@ function getACFLayout()
                 'placement' => 'top',
                 'endpoint' => 0
             ],
-            // [
-            //     'label' => __('Content Alignment', 'flynt'),
-            //     'name' => 'contentAlignment',
-            //     'type' => 'button_group',
-            //     'choices' => [
-            //         'alignTop' =>
-            //             '<i class=\'dashicons dashicons-arrow-up-alt\' title=\'Align content top\'></i>',
-            //         'alignCenter' =>
-            //             '<i class=\'dashicons dashicons-minus\' title=\'Align content Center\'></i>',
-            //         'alignBottom' =>
-            //             '<i class=\'dashicons dashicons-arrow-down-alt\' title=\'Align content bottom\'></i>'
-            //     ],
-            //     'required' => 0,
-            //     'default_value' => 'textLeft'
-            // ],
             [
                 'label' => __('Content', 'flynt'),
                 'name' => 'contentHtml',

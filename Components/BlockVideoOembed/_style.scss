@@ -15,6 +15,7 @@
   }
   
   .figure-caption {
-    margin-left: 0.625rem;
+    grid-column-end: 13;
+    grid-column-start: 4;
   }
 }

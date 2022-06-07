@@ -6,7 +6,8 @@
 
 @include font-face('Founders Grotesk', 'FoundersGroteskRegular', '400', 'normal');
 @include font-face('Druk', 'DrukTextMedium', '500', 'normal');
-@include font-face('Octin College', 'OctinCollegeRegular', '400', 'normal');
+@include font-face('Octin College Regular', 'OctinCollegeRegular', '400', 'normal');
+@include font-face('Octin College Book', 'OctinCollegeBook', '300', 'normal');
 @include font-face('Octin Spraypaint', 'OctinSpraypaintRegular', '400', 'normal');
 
 html {
@@ -73,12 +74,13 @@ h1,
 }
 
 .h1Cta {
-  font-family: 'Octin College', Helvetica, Arial, sans-serif;
+  font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
   font-size: 4.063rem;
   letter-spacing: -0.01rem;
   line-height: 4.263rem;
   margin-bottom: 0;
   margin-top: 0;
+  text-transform: uppercase;
 
   @media (max-width: $breakpoint-mobile-horizontal) {
     font-size: 2rem;
@@ -91,6 +93,7 @@ h2,
   font-family: 'Druk', Helvetica, Arial, sans-serif;
   font-size: 2.188rem;
   line-height: 2.188rem;
+  text-transform: uppercase;
 
   @media (max-width: $breakpoint-mobile-horizontal) {
     font-size: 2.188rem;
@@ -99,7 +102,7 @@ h2,
 
 h3,
 .h3 {
-  font-family: 'Octin College', Helvetica, Arial, sans-serif;
+  font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
   font-size: 0.938rem;
   letter-spacing: 0.03rem;
   line-height: 1rem;
@@ -109,8 +112,8 @@ h3,
 h4,
 .h4 {
   font-family: 'Druk', Helvetica, Arial, sans-serif;
-  font-size: 2.188rem;
-  line-height: 2.5rem;
+  font-size: 3rem;
+  line-height: 3rem;
   padding-top: 1rem;
 
   @media (max-width: $breakpoint-mobile-horizontal) {
@@ -156,6 +159,7 @@ img {
 
 figcaption {
   font-size: 0.875rem;
+  line-height: 1;
   margin-top: 0.625rem;
   text-transform: uppercase;
 }
@@ -197,6 +201,11 @@ ol {
   ul,
   ol {
     margin-bottom: 1.2rem;
+  }
+
+  li {
+    font-size: 1.375rem;
+    line-height: 1.688rem;
   }
 }
 
@@ -603,7 +612,7 @@ select {
     column-gap: $gap;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    padding: $spacing-large*2 $spacing-small;
+    padding: $spacing-large*6 $spacing-small;
     position: relative;
   }
 }
@@ -612,27 +621,27 @@ select {
   position: relative;
 }
 
-.componentSpacing {
-  padding-bottom: $spacing-component;
+// .componentSpacing {
+//   padding-bottom: $spacing-component;
 
-  @media (min-width: $breakpoint-tablet) {
-    padding-bottom: $spacing-component;
-  }
+//   @media (min-width: $breakpoint-tablet) {
+//     padding-bottom: $spacing-component;
+//   }
 
-  @media (min-width: $breakpoint-desktop) {
-    padding-bottom: $spacing-component;
-  }
-}
+//   @media (min-width: $breakpoint-desktop) {
+//     padding-bottom: $spacing-component;
+//   }
+// }
 
-> .componentSpacing {
-  &:first-child {
-    padding-top: $spacing-component;
-  }
+// > .componentSpacing {
+//   &:first-child {
+//     padding-top: $spacing-component;
+//   }
 
-  &:last-child {
-    padding-bottom: 0;
-  }
-}
+//   &:last-child {
+//     padding-bottom: 0;
+//   }
+// }
 
 .centerMaxWidthContainer {
   @include center;
@@ -653,8 +662,10 @@ select {
 
 .preContent {
   @include reset-content-margins;
-  font-family: 'Octin College', Helvetica, Arial, sans-serif;
+  font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
   font-size: 0.938rem;
+  grid-column-end: 13;
+  grid-column-start: 1;
   letter-spacing: 0.03rem;
   margin: 0 0 40px;
   padding-top: 0;
