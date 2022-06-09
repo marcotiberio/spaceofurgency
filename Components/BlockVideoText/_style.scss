@@ -2,12 +2,8 @@
   @import 'Partials/video';
 
   .container {
-    align-items: center;
-    column-gap: $spacing-small;
-    display: flex;
     grid-column-end: 13;
     grid-column-start: 1;
-    margin: 0 auto;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
       display: block;
