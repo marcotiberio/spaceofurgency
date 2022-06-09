@@ -1,0 +1,16 @@
+<div class="flyntComponent {{ options.theme }}" id="{{ preContentHtml|lower|replace({' ': ''})}}" is="flynt-block-video-text">
+  <div class="preContent">{{ preContentHtml|e('wp_kses_post') }}</div>
+  <div class="container">
+    <div class="box box--{{ videoPosition }}">
+      <div class="box-inner box-inner--content">
+        {{ contentHtml|e('wp_kses_post') }}
+        {% if contentLink %}
+          <div class="box-inner--link"><a href="{{ contentLink.url }}">{{ contentLink.title }}</a></div>
+        {% endif %}
+      </div>
+      <div class="video box-inner box-inner--video">
+        {% include 'Partials/_video.twig' ignore missing with {video: video, videoSize: videoSize, image: posterImage} only %}
+      </div>
+    </div>
+  </div>
+</div>

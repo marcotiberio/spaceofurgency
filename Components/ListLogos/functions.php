@@ -99,22 +99,7 @@ function getACFLayout()
                 'open' => 0,
                 'multi_expand' => 0,
                 'endpoint' => 1,
-            ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0,
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'sub_fields' => [
-                    FieldVariables\getTheme(),
-                ]
-            ],
+            ]
         ]
     ];
 }

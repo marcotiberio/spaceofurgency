@@ -36,7 +36,7 @@
 
       @media (max-width: $breakpoint-mobile-horizontal) {
         border-bottom: 1px solid $white;
-        width: 33%;
+        width: 50%;
 
         &:last-child {
           border-right: 0;
@@ -52,6 +52,11 @@
         font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
         text-decoration: none;
         text-transform: uppercase;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          font-size: 1rem;
+          line-height: 1;
+        }
 
         &:hover,
         &:focus {

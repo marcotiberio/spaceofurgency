@@ -5,45 +5,50 @@
     {{ renderComponent(component) }}
   {% endfor %}
   <article class="post">
-    {% if post.thumbnail %}
-    <div class="post-featuredImage componentSpacing">
-      <img src="{{ post.thumbnail }}"
-      data-srcset="{{function('wp_get_attachment_image_srcset', post.thumbnail.id)}}"
-      data-sizes="auto">
-      {% if post.thumbnail.caption %}
-        <figcaption class="figure-caption small">{{ post.thumbnail.caption|e }}</figcaption>
-      {% endif %}
-    </div>
-    {% endif %}
+    {% for component in post.meta('spaceheaderComponents') %}
+      {{ renderComponent(component) }}
+    {% endfor %}
     <header class="post-header componentSpacing">
       <div class="left">
         <h1>{{ post.title }}</h1>
         {% if post.yearProject or post.postWhere or post.postWhat %}
           <div class="meta">
+            {% if post.yearType %}
             <div>
               <span>Type</span>
               <span>{{ post.yearType|e('wp_kses_post') }}</span>
             </div>
+            {% endif %}
+            {% if post.postMethods %}
             <div>
               <span>Methods</span>
               <span>{{ post.postMethods|e('wp_kses_post') }}</span>
             </div>
+            {% endif %}
+            {% if post.postGrantSize %}
             <div>
               <span>Grant Size</span>
               <span>{{ post.postGrantSize|e('wp_kses_post') }}</span>
             </div>
+            {% endif %}
+            {% if post.yearLocation %}
             <div>
               <span>Location</span>
               <span>{{ post.yearLocation|e('wp_kses_post') }}</span>
             </div>
+            {% endif %}
+            {% if post.postYear %}
             <div>
               <span>Year</span>
               <span>{{ post.postYear|e('wp_kses_post') }}</span>
             </div>
+            {% endif %}
+            {% if post.postPartners %}
             <div>
               <span>Partners</span>
               <span>{{ post.postPartners|e('wp_kses_post') }}</span>
             </div>
+            {% endif %}
           </div>
         {% endif %}
       </div>

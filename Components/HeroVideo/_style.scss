@@ -9,10 +9,11 @@
     position: relative;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
-      height: 70vh;
+      // height: 70vh;
     }
 
     .figure {
+      background-color: $black;
       display: block;
       margin-bottom: 0;
     
@@ -30,7 +31,7 @@
       z-index: -1;
 
       &--isLoading {
-        background: rgba(0, 0, 0, 0.5);
+        background: $black;
         transition: all 1s linear;
       
         .figure {

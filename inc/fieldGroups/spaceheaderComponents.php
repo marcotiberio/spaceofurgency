@@ -16,6 +16,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
                     Components\HeroVideo\getACFLayout(),
+                    Components\HeroImageCta\getACFLayout(),
                 ],
             ],
         ],
@@ -25,6 +26,13 @@ add_action('Flynt/afterRegisterComponents', function () {
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'space',
+                ],
+            ],
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'project',
                 ],
             ],
         ],

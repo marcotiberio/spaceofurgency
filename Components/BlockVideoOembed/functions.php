@@ -41,7 +41,7 @@ function getACFLayout()
                 'preview_size' => 'medium',
                 'mime_types' => 'jpg,jpeg,png',
                 'instructions' => __('Recommended Size: Min-Width 1920px; Min-Height: 1080px; Image-Format: JPG, PNG. Aspect Ratio 16/9.', 'flynt'),
-                'required' => 1,
+                'required' => 0,
                 'wrapper' => [
                     'width' => '50',
                 ],

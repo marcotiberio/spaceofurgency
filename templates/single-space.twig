@@ -11,26 +11,32 @@
     <header class="post-header componentSpacing">
       <div class="left">
         <h1 class="title">{{ post.title }}</h1>
-        {% if post.yearProject or post.postWhere or post.postWhat %}
           <div class="meta">
+            {% if post.yearProject or post.postCity or post.postCountry %}
             <div>
               <span>Date</span>
               <span>{{ post.yearProject|e('wp_kses_post') }}</span>
             </div>
+            {% endif %}
+            {% if post.postCity or post.postCountry %}
             <div>
               <span>City</span>
               <span>{{ post.postCity|e('wp_kses_post') }}</span>
             </div>
+            {% endif %}
+            {% if post.postCountry %}
             <div>
               <span>Country</span>
               <span>{{ post.postCountry|e('wp_kses_post') }}</span>
             </div>
+            {% endif %}
+            {% if post.postWhat %}
             <div>
               <span>What</span>
               <span>{{ post.postWhat|e('wp_kses_post') }}</span>
             </div>
+            {% endif %}
           </div>
-        {% endif %}
       </div>
       <div class="right">
         {% if post.introHtml %}

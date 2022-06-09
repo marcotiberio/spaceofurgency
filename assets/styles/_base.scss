@@ -67,6 +67,7 @@ h1,
   line-height: 3.75rem;
   margin-bottom: 3.75rem;
   margin-top: 0;
+  text-transform: uppercase;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
     font-size: 4.063rem;
@@ -614,6 +615,10 @@ select {
     grid-template-columns: repeat(12, 1fr);
     padding: $spacing-large*6 $spacing-small;
     position: relative;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      padding: $spacing-large*2 $spacing-small;
+    }
   }
 }
 

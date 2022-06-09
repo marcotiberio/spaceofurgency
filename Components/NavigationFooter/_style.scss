@@ -125,6 +125,11 @@
     }
   }
 
+  li {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
   @import 'Partials/menu';
   @import 'Partials/newsletter';
 }
