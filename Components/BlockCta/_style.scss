@@ -29,6 +29,7 @@
   
         @media (max-width: $breakpoint-mobile-horizontal) {
           font-size: 2rem;
+          line-height: 2.8rem;
         }
       }
 
@@ -41,6 +42,7 @@
   
         @media (max-width: $breakpoint-mobile-horizontal) {
           font-size: 2rem;
+          line-height: 2.8rem;
         }
       }
     }
@@ -52,8 +54,9 @@
         line-height: 4.263rem;
         margin: 0;
   
-        @media (min-width: $breakpoint-mobile-horizontal) {
-          font-size: 4.063rem;
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          font-size: 2rem;
+          line-height: 2.5rem;
         }
       }
 
@@ -63,8 +66,9 @@
         line-height: 4.263rem;
         margin: 0;
   
-        @media (min-width: $breakpoint-mobile-horizontal) {
-          font-size: 4.063rem;
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          font-size: 2rem;
+          line-height: 2.5rem;
         }
       }
     }

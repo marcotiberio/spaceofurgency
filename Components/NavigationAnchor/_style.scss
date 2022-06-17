@@ -8,12 +8,13 @@
   position: fixed !important;
   top: 59px;
   width: 100%;
-  z-index: 10000;
+  z-index: 97;
 
   @media (max-width: $breakpoint-mobile-horizontal) {
     backdrop-filter: blur(0);
     background: transparent;
     border-bottom: 0;
+    border-top: 0;
     padding: 0 !important;
     top: 45px;
   }
@@ -50,8 +51,6 @@
     width: 100%;
 
     &-container {
-      backdrop-filter: blur(8px);
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
       border-bottom: 1px solid $white;
       grid-column-end: 13;
       grid-column-start: 1;
@@ -60,6 +59,9 @@
       width: 100%;
 
       @media (max-width: $breakpoint-mobile-horizontal) {
+        backdrop-filter: blur(8px);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        border-bottom: 0;
         display: none;
         width: 85%;
       }

@@ -5,6 +5,10 @@
   align-items: center;
   display: flex;
   justify-content: center;
+
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    padding: $spacing-small !important;
+  }
   
 
   .container {

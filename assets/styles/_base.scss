@@ -19,8 +19,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
+  hyphens: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-wrap: break-word;
+  word-break: break-all;
   word-wrap: break-word;
 
 
