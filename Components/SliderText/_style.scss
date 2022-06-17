@@ -1,4 +1,8 @@
 [is='flynt-slider-text'] {
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    padding: 0 $spacing-small !important;
+  }
+
   .container {
     grid-column-end: 13;
     grid-column-start: 1;
@@ -20,7 +24,7 @@
       position: relative;
 
       @media (max-width: $breakpoint-mobile-horizontal) {
-        height: 30vh;
+        height: 80vh;
       }
 
       &--inner {

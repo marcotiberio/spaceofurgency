@@ -1,5 +1,5 @@
 [is='flynt-list-logos'] {
-  background-color: $white;
+  background-color: $black;
   
   .container {
     grid-column-end: 13;
@@ -7,11 +7,13 @@
   }
 
   .preContent {
+    color: $white;
     margin-bottom: $spacing-large;
   }
 
   .page-link {
     border-top: 1px solid $white;
+    color: $white;
     display: block;
     font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
     letter-spacing: 0.03rem;

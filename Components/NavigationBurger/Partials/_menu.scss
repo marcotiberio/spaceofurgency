@@ -35,6 +35,7 @@
   &-link {
     color: $color-text;
     display: block;
+    margin-bottom: 0;
     padding: 12px $spacing-small;
     text-align: center;
     text-decoration: none;
@@ -54,4 +55,9 @@
 &.flyntComponent-menuIsOpen .menu {
   transform: translateX(0);
   visibility: visible;
+}
+
+&.flyntComponent-menuIsOpen .container {
+  backdrop-filter: blur(0);
+  background: transparent;
 }

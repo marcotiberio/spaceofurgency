@@ -1,9 +1,12 @@
 <div class="flyntComponent" is="flynt-navigation-anchor">
-  <ul class="list">
-    {% for panel in repeaterAnchor %}
-      <li class="panel">
-        <a href="#{{ panel.sectionLink|lower|replace({' ': ''})}}" type="button">{{ panel.sectionLink|e }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="submenu-toggle">Sub<br>menu</div>
+  <div class="list-container">
+    <ul class="list">
+      {% for panel in repeaterAnchor %}
+        <li class="panel">
+          <a href="#{{ panel.sectionLink|lower|replace({' ': ''})}}" type="button">{{ panel.sectionLink|e }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>

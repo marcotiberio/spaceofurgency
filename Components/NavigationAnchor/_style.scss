@@ -4,29 +4,68 @@
   border-bottom: 1px solid $white;
   border-top: 1px solid $white;
   left: 0;
-  padding: 0 $spacing-small !important;
+  padding: 0 !important;
   position: fixed !important;
   top: 59px;
   width: 100%;
   z-index: 10000;
 
   @media (max-width: $breakpoint-mobile-horizontal) {
+    backdrop-filter: blur(0);
+    background: transparent;
     border-bottom: 0;
     padding: 0 !important;
     top: 45px;
+  }
+
+  .submenu-toggle {
+    display: none;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      backdrop-filter: blur(8px);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+      border-bottom: 1px solid $white;
+      border-left: 1px solid $white;
+      color: $white;
+      cursor: pointer;
+      display: block;
+      padding: 8px 0;
+      position: fixed;
+      right: 1px;
+      text-align: center;
+      text-transform: uppercase;
+      top: 45px;
+      width: 15%;
+    }
   }
 
   .list {
     align-items: center;
     display: flex;
     flex-flow: row wrap;
-    grid-column-end: 13;
-    grid-column-start: 1;
     justify-content: space-between;
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
+
+    &-container {
+      backdrop-filter: blur(8px);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+      border-bottom: 1px solid $white;
+      grid-column-end: 13;
+      grid-column-start: 1;
+      margin: 0;
+      padding: 0 !important;
+      width: 100%;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        display: none;
+        width: 85%;
+      }
+    }
+
+    
 
     .panel {
       border-right: 1px solid $white;
@@ -34,17 +73,17 @@
       padding: $spacing-small/2 0;
       text-align: center;
 
+      &:last-child {
+        border-right: 0;
+      }
+
       @media (max-width: $breakpoint-mobile-horizontal) {
         border-bottom: 1px solid $white;
         width: 50%;
 
         &:last-child {
-          border-right: 0;
+          border-right: 1px solid $white;
         }
-      }
-
-      &:last-child {
-        border-right: 0;
       }
       
       a {

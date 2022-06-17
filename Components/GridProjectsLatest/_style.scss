@@ -16,10 +16,12 @@
 
     @media (max-width: $breakpoint-tablet-horizontal) {
       grid-template-columns: repeat(2, 1fr);
+      row-gap: $spacing-small;
     }
 
     @media (max-width: $breakpoint-mobile-horizontal) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: $spacing-small;
     }
   }
 
@@ -34,10 +36,17 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: 100%;
+    overflow: hidden;
 
     &-image {
       background: $color-contrast;
       flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
+      transition: all 0.2s linear;
+
+      &:hover {
+        transform: scale(1.1);
+        transform-origin: bottom center;
+      }
     }
 
     &-inner {
@@ -61,6 +70,7 @@
     &-tags {
       border-top: 1px solid $white;
       font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
+      font-size: 1rem;
       padding: $spacing-small $spacing-small 0;
       text-transform: uppercase;
 
