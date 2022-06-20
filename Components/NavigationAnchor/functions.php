@@ -17,7 +17,6 @@ function getACFLayout()
                 'name' => 'repeaterAnchor',
                 'type' => 'repeater',
                 'layout' => 'row',
-                'min' => 1,
                 'button_label' => __('Add Section', 'flynt'),
                 'sub_fields' => [
                     [

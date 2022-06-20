@@ -51,7 +51,6 @@
     width: 100%;
 
     &-container {
-      border-bottom: 1px solid $white;
       grid-column-end: 13;
       grid-column-start: 1;
       margin: 0;
@@ -70,6 +69,7 @@
     
 
     .panel {
+      border-bottom: 1px solid $white;
       border-right: 1px solid $white;
       flex-grow: 1;
       padding: $spacing-small/2 0;
@@ -80,7 +80,6 @@
       }
 
       @media (max-width: $breakpoint-mobile-horizontal) {
-        border-bottom: 1px solid $white;
         width: 50%;
 
         &:last-child {
