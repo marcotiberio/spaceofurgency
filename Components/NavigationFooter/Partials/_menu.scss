@@ -7,8 +7,20 @@
   margin: 0;
   padding: 0;
 
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    flex-flow: row wrap;
+  }
+
   &-item {
     padding-bottom: $spacing-small;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      margin-right: $gap;
+    }
   }
 
   &-link {

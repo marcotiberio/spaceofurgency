@@ -1,39 +1,37 @@
 <img src="/wp-content/uploads/2022/06/before.svg" class="before">
 <div class="flyntComponent" is="flynt-navigation-footer">
-  <div class="container">
-    <div class="container-left">
-      {% include 'Partials/_newsletter.twig' %}
-      <div class="repeater">
-        <div class="repeater-title">{{ listSocialmediaTitle }}</div>
-        <ul class="list">
-          {% for panel in repeaterSocial %}
-            <li class="panel">
-              <a href="{{ panel.panelLink.url }}" target="_blank" rel="noreferrer noopener" type="button">
-                {{ panel.panelLink.title|e }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
+  <div class="container container-newsletter--{{ showHide }}">
+    <div class="newsletter">
+    {% include 'Partials/_newsletter.twig' %}
     </div>
-    <div class="container-right">
-      <div class="repeater">
-        <div class="repeater-title">{{ listDonateTitle }}</div>
-        <ul class="list">
-          {% for panel in repeaterDonate %}
-            <li class="panel">
-              <a href="{{ panel.panelLink.url }}" target="_blank" rel="noreferrer noopener" type="button">
-                {{ panel.panelLink.title|e }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% if menu %}
-        <nav class="navigation" aria-label="{{ __("Footer", "flynt") }}">
-          {% include 'Partials/_menu.twig' with { 'items': menu.get_items, 'level': '0', 'maxLevel': maxLevel } only %}
-        </nav>
-      {% endif %}
+    <div class="repeater repeater-left">
+      <div class="repeater-title">{{ listSocialmediaTitle }}</div>
+      <ul class="list">
+        {% for panel in repeaterSocial %}
+          <li class="panel">
+            <a href="{{ panel.panelLink.url }}" target="_blank" rel="noreferrer noopener" type="button">
+              {{ panel.panelLink.title|e }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
+    <div class="repeater repeater-right">
+      <div class="repeater-title">{{ listDonateTitle }}</div>
+      <ul class="list">
+        {% for panel in repeaterDonate %}
+          <li class="panel">
+            <a href="{{ panel.panelLink.url }}" target="_blank" rel="noreferrer noopener" type="button">
+              {{ panel.panelLink.title|e }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% if menu %}
+      <nav class="navigation" aria-label="{{ __("Footer", "flynt") }}">
+        {% include 'Partials/_menu.twig' with { 'items': menu.get_items, 'level': '0', 'maxLevel': maxLevel } only %}
+      </nav>
+    {% endif %}
   </div>
 </div>

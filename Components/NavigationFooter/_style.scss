@@ -6,80 +6,69 @@
   .container {
     align-items: flex-start;
     column-gap: $gap;
-    display: grid;
-    grid-auto-rows: auto;
-    grid-template-columns: repeat(12, 1fr);
-    row-gap: $gap*2;
+    display: flex;
+    flex-flow: row;
 
-    &-left {
-      align-items: flex-start;
-      display: grid;
-      grid-column-end: 7;
-      grid-column-start: 1;
-      grid-template-columns: repeat(6, 1fr);
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      flex-flow: row wrap;
+    }
+
+    .newsletter {
+      margin-right: 8.33%;
+      width: 25%;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
-        grid-auto-rows: auto;
-        grid-column-end: 13;
-        grid-column-start: 1;
-        row-gap: $gap*2;
-      }
-
-      .newsletter {
-        grid-column-end: 4;
-        grid-column-start: 1;
-        margin: 0;
-
-        @media (max-width: $breakpoint-tablet-horizontal) {
-          grid-column-end: 7;
-          grid-column-start: 1;
-        }
-      }
-
-      .repeater {
-        grid-column-end: 5;
-        grid-column-start: 7;
-
-        @media (max-width: $breakpoint-tablet-horizontal) {
-          grid-column-end: 7;
-          grid-column-start: 1;
-        }
-
-        &-title {
-          color: $white;
-        }
+        margin-bottom: $gap*2;
+        width: 100%;
       }
     }
 
-    &-right {
-      align-items: flex-start;
-      display: grid;
-      grid-column-end: 13;
-      grid-column-start: 7;
-      grid-template-columns: repeat(6, 1fr);
+    .repeater {
+      width: 25%;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        margin-bottom: $gap*2;
+        margin-right: $gap;
+        width: calc(50% - 32px);
+      }
+
+      &-right {
+        margin-left: 8.33%;
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          margin-left: 0;
+        }
+      }
+
+      &-title {
+        color: $white;
+      }
+    }
+
+    .navigation {
+      margin-left: 8.33%;
+      width: 25%;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
-        grid-column-end: 13;
-        grid-column-start: 1;
+        margin-left: 0;
       }
 
-      .repeater {
-        grid-column-end: 4;
-        grid-column-start: 2;
-
-        @media (max-width: $breakpoint-tablet-horizontal) {
-          grid-column-end: 4;
-          grid-column-start: 1;
-        }
-
-        &-title {
-          color: $white;
-        }
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        margin-left: 0;
+        width: 100%;
       }
+    }
 
-      .navigation {
-        grid-column-end: 7;
-        grid-column-start: 5;
+    &-newsletter--show {
+      .newsletter {
+        display: block;
+      }
+    }
+    
+  
+    &-newsletter--hide {
+      .newsletter {
+        display: none;
       }
     }
   }
@@ -91,7 +80,7 @@
     margin: 10px 0 0;
     text-transform: uppercase;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-tablet-horizontal) {
       margin: 0;
     }
   }
@@ -109,6 +98,10 @@
 
     .panel {
       padding-right: 50px;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        padding-right: $gap;
+      }
       
       a {
         color: $white;
@@ -129,6 +122,23 @@
     font-size: inherit;
     line-height: inherit;
   }
+
+  
+  // .container-newsletter--show {
+  //   @media (max-width: $breakpoint-tablet-horizontal) {
+  //     .repeater-left {
+  //       margin-left: 0;
+  //     }
+  //   }
+  // }
+
+  // .container-newsletter--hide {
+  //   @media (max-width: $breakpoint-tablet-horizontal) {
+  //     .repeater-left {
+  //       margin-left: 0;
+  //     }
+  //   }
+  // }
 
   @import 'Partials/menu';
   @import 'Partials/newsletter';

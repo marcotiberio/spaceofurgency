@@ -127,6 +127,22 @@ Options::addTranslatable('NavigationFooter', [
         'endpoint' => 0
     ],
     [
+        'label' => __('Show/Hide', 'flynt'),
+        'name' => 'showHide',
+        'type' => 'radio',
+        'other_choice' => 0,
+        'save_other_choice' => 0,
+        'layout' => 'horizontal',
+        'choices' => [
+            'show' => __('show', 'flynt'),
+            'hide' => __('hide', 'flynt'),
+        ],
+        'default_value' => 'Show',
+        'wrapper' =>  [
+            'width' => '100',
+        ],
+    ],
+    [
         'label' => __('Contact Form 7 Form', 'flynt'),
         'name' => 'formId',
         'type' => 'post_object',
