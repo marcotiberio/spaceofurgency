@@ -618,6 +618,7 @@ select {
 
 .mainContent {
   flex: 1 0 auto;
+  min-height: 100vh;
 
   .flyntComponent {
     column-gap: $gap;
