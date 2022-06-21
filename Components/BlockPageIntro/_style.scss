@@ -2,6 +2,15 @@
   .container {
     grid-column-end: 8;
     grid-column-start: 4;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      grid-column-end: 13;
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      grid-column-end: 13;
+      grid-column-start: 1;
+    }
   }
 
   .content {
