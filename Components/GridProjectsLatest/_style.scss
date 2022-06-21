@@ -4,38 +4,6 @@
     grid-column-start: 1;
   }
 
-  // .grid {
-  //   align-items: flex-start;
-  //   column-gap: $gap;
-  //   display: flex;
-  //   flex-flow: row wrap;
-  //   grid-column-end: 13;
-  //   grid-column-start: 1;
-  //   justify-content: center;
-  //   list-style: none;
-  //   margin: 0;
-  //   padding: 0;
-  //   row-gap: $spacing-large*2;
-  // }
-
-  // .grid-item {
-  //   border: 1px solid $white;
-  //   height: auto;
-  //   width: calc(33% - 6px);
-
-  //   @media (max-width: $breakpoint-desktop-wide) {
-  //     width: calc(33% - 8px);
-  //   }
-
-  //   @media (max-width: $breakpoint-tablet-horizontal) {
-  //     width: calc(50% - 8px);
-  //   }
-
-  //   @media (max-width: $breakpoint-mobile-horizontal) {
-  //     width: 100%;
-  //   }
-  // }
-
   .grid {
     column-gap: $gap;
     display: grid;
