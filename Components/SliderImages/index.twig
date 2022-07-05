@@ -1,4 +1,4 @@
-<div class="flyntComponent componentSpacing" is="flynt-slider-images">
+<div class="flyntComponent componentSpacing" id="{{ preContentHtml|lower|replace({' ': ''})}}" is="flynt-slider-images">
   <script type="application/json">{{ jsonData|json_encode }}</script>
   <div class="container">
     {# {% if preContentHtml %}

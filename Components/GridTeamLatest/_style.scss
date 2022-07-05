@@ -44,6 +44,8 @@
     &-image {
       background: $color-contrast;
       flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
+      height: 30vh;
+      object-fit: cover;
     }
 
     &-inner {

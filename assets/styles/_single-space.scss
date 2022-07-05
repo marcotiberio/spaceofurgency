@@ -14,7 +14,7 @@
       column-gap: $gap;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      padding: $spacing-large*6 $spacing-small;
+      padding: $spacing-large*4 $spacing-small;
       position: relative;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
@@ -50,7 +50,7 @@
       grid-column-end: 13;
       grid-column-start: 1;
       grid-template-columns: repeat(12, 1fr);
-      margin-bottom: $spacing-large*6;
+      margin-bottom: $spacing-large*4;
       margin-top: 160px;
 
       @media (max-width: $breakpoint-tablet-horizontal) {

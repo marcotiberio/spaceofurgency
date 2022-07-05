@@ -61,6 +61,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockPageIntro\getACFLayout(),
                     Components\BlockCta\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
+                    Components\BlockVideoText\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\GridPostsEventsPast\getACFLayout(),
                     Components\GridPostsEventsUpcoming\getACFLayout(),
@@ -69,9 +70,9 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\GridResourcesLatest\getACFLayout(),
                     Components\HeroImageCta\getACFLayout(),
                     Components\HeroVideo\getACFLayout(),
+                    Components\ListLogos\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
                     Components\SliderText\getACFLayout(),
-                    Components\ListLogos\getACFLayout(),
                 ]
             ]
         ],

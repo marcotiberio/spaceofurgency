@@ -25,6 +25,13 @@ add_action('Flynt/afterRegisterComponents', function () {
                 [
                     'param' => 'page',
                     'operator' => '==',
+                    'value' => '11',
+                ],
+            ],
+            [
+                [
+                    'param' => 'page',
+                    'operator' => '==',
                     'value' => '16',
                 ],
             ],

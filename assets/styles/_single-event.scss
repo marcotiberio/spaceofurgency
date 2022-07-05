@@ -13,8 +13,12 @@
       column-gap: $gap;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      padding: $spacing-large $spacing-small;
+      padding: $spacing-large*4 $spacing-small;
       position: relative;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        padding: $spacing-large*2 $spacing-small;
+      }
     }
   
     &-header {

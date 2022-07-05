@@ -69,6 +69,11 @@ function getACFLayout()
                 ],
             ],
             [
+                'label' => __('Video Caption', 'flynt'),
+                'name' => 'videoCaption',
+                'type' => 'text',
+            ],
+            [
                 'label' => __('Content', 'flynt'),
                 'name' => 'contentTab',
                 'type' => 'tab',

@@ -64,7 +64,7 @@ add_action('Flynt/afterRegisterComponents', function () {
             [
                 'label' => __('Year', 'flynt'),
                 'name' => 'yearProject',
-                'type' => 'number',
+                'type' => 'text',
                 'wrapper' => [
                     'width' => '33',
                 ]

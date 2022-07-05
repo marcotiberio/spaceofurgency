@@ -1,13 +1,16 @@
 [is='flynt-block-video-oembed'] {
   @import 'Partials/video';
 
+  .preContent {
+    color: $white;
+  }
+
   .container {
-    align-items: center;
-    column-gap: $spacing-small;
-    display: flex;
+    display: block;
     grid-column-end: 13;
     grid-column-start: 4;
     margin: 0 auto;
+    width: 100%;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
       display: block;

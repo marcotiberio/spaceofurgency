@@ -9,10 +9,10 @@
     position: relative;
 
     &-item {
-      height: 0;
+      height: fit-content;
       overflow: hidden;
       // padding-bottom: (2/3) * 100%;
-      padding-bottom: 40%;
+      // padding-bottom: 40%;
       position: relative;
 
       @media (max-width: $breakpoint-tablet-horizontal) {

@@ -10,6 +10,7 @@
       </div>
       <div class="video box-inner box-inner--video">
         {% include 'Partials/_video.twig' ignore missing with {video: video, videoSize: videoSize, image: posterImage} only %}
+        <figcaption>{{ videoCaption }}</figcaption>
       </div>
     </div>
   </div>

@@ -1,6 +1,10 @@
 [is='flynt-block-video-text'] {
   @import 'Partials/video';
 
+  .preContent {
+    color: $white;
+  }
+
   .container {
     grid-column-end: 13;
     grid-column-start: 1;
@@ -13,11 +17,16 @@
 
   .box {
     align-items: flex-start;
+    color: $white;
     column-gap: $gap;
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(12, 1fr);
     row-gap: $gap;
+
+    &-inner--video {
+      width: 100%;
+    }
 
     &--videoLeft {
       .box-inner--video {
