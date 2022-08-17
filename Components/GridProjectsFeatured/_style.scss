@@ -1,0 +1,119 @@
+[is='flynt-grid-projects-featured'] {
+  .container {
+    grid-column-end: 13;
+    grid-column-start: 1;
+  }
+
+  .grid {
+    align-items: flex-start;
+    column-gap: $gap;
+    display: flex;
+    flex-flow: row wrap;
+    grid-column-end: 13;
+    grid-column-start: 1;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    row-gap: $spacing-large*2;
+  }
+
+  .grid-item {
+    border: 1px solid $white;
+    flex-grow: 0;
+    height: auto;
+    width: calc(33% - 0.5rem);
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      width: calc(50% - 0.5rem);
+    }
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      width: 100%;
+    }
+  }
+
+  // .grid {
+  //   column-gap: $gap;
+  //   display: grid;
+  //   grid-auto-rows: auto;
+  //   grid-column-end: 13;
+  //   grid-column-start: 1;
+  //   grid-template-columns: repeat(3, 1fr);
+  //   list-style: none;
+  //   row-gap: $spacing-large*2;
+
+  //   @media (max-width: $breakpoint-tablet-horizontal) {
+  //     grid-template-columns: repeat(2, 1fr);
+  //     row-gap: $spacing-small;
+  //   }
+
+  //   @media (max-width: $breakpoint-mobile-horizontal) {
+  //     grid-template-columns: repeat(1, 1fr);
+  //     row-gap: $spacing-small;
+  //   }
+  // }
+
+  // .grid-item {
+  //   border: 1px solid $white;
+  //   height: 100%;
+  //   width: 100%;
+  // }
+
+  .content {
+    height: 100%;
+    overflow: hidden;
+
+    &-image {
+      background: $color-contrast;
+      flex-shrink: 0; // IE11 bug fix (prevent image from stretchin')
+      transition: all 0.2s linear;
+
+      &:hover {
+        transform: scale(1.1);
+        transform-origin: bottom center;
+      }
+    }
+
+    &-inner {
+      @include reset-content-margins;
+      border-top: 1px solid $white;
+      flex-grow: 1;
+      padding: $spacing-small 0;
+    }
+
+    &-link {
+      display: block;
+      height: 100%;
+      text-decoration: none;
+    }
+
+    &-title {
+      padding: 0 $spacing-small;
+      text-transform: uppercase;
+    }
+
+    &-tags {
+      border-top: 1px solid $white;
+      font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      padding: $spacing-small $spacing-small 0;
+      text-transform: uppercase;
+
+      .tag {
+        &:not(:last-child) {
+          &::after {
+            content: ',';
+            
+          }
+        }
+      }
+    }
+  }
+
+  .allPostsLink {
+    margin-top: $spacing-component/2;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}

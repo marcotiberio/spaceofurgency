@@ -11,7 +11,7 @@
     flex-flow: row wrap;
     grid-column-end: 13;
     grid-column-start: 1;
-    justify-content: center;
+    justify-content: flex-start;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -20,12 +20,12 @@
 
   .grid-item {
     border: 1px solid $white;
-    flex-grow: 1;
+    flex-grow: 0;
     height: auto;
-    width: calc(33% - 32px);
+    width: calc(33% - 0.5rem);
 
     @media (max-width: $breakpoint-tablet-horizontal) {
-      width: calc(50% - 16px);
+      width: calc(50% - 0.5rem);
     }
 
     @media (max-width: $breakpoint-mobile-horizontal) {

@@ -63,7 +63,6 @@ function getACFLayout()
                 'type' => 'repeater',
                 'collapsed' => '',
                 'min' => 1,
-                'max' => 8,
                 'layout' => 'block',
                 'button_label' => 'Add',
                 'sub_fields' => [

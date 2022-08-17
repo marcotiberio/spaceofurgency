@@ -1,11 +1,9 @@
 [is='flynt-block-collapse'] {
-  margin-top: -$spacing-small;
+  margin: -50px auto;
+  padding: 0 $spacing-small !important;
 
-  @media (min-width: $breakpoint-tablet) {
-    margin-top: -$spacing-small;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    margin-top: -$spacing-large;
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    margin: -25px auto;
+    padding: 0 $spacing-small !important;
   }
 }

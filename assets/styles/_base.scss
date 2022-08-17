@@ -625,11 +625,11 @@ select {
     column-gap: $gap;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    padding: $spacing-large*4 $spacing-small;
+    padding: 100px $spacing-small;
     position: relative;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
-      padding: $spacing-large*2 $spacing-small;
+      padding: 50px $spacing-small;
     }
   }
 }
@@ -793,7 +793,7 @@ select {
 /* Google Maps */
 
 .gmnoprint {
-  display: none !important;
+  display: block !important;
 }
 
 /**

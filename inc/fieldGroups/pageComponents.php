@@ -56,6 +56,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\AccordionDefault\getACFLayout(),
                     Components\ArchiveMaps\getACFLayout(),
+                    Components\BlockCollapse\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
                     Components\BlockPageIntro\getACFLayout(),
@@ -66,6 +67,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\GridPostsEventsPast\getACFLayout(),
                     Components\GridPostsEventsUpcoming\getACFLayout(),
                     Components\GridProjectsLatest\getACFLayout(),
+                    Components\GridProjectsFeatured\getACFLayout(),
                     Components\GridTeamLatest\getACFLayout(),
                     Components\GridResourcesLatest\getACFLayout(),
                     Components\HeroImageCta\getACFLayout(),
