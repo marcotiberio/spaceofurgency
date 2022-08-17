@@ -1,6 +1,6 @@
 <div class="flyntComponent componentSpacing {{ options.theme }}" id="{{ preContentHtml|lower|replace({' ': ''})}}" is="flynt-block-image-text-post">
-  <div class="preContent">{{ preContentHtml|e('wp_kses_post') }}</div>
-  <div class="container">
+  <div class="preContent notFullWidth">{{ preContentHtml|e('wp_kses_post') }}</div>
+  <div class="container notFullWidth">
     <div class="box box--{{ imagePosition }} {{ imageSize }}">
       <div class="box-inner box-inner--content">
         {{ contentHtml|e('wp_kses_post') }}

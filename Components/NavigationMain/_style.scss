@@ -46,7 +46,9 @@
       }
 
       &:last-child {
-        border-right: 0;
+        @media (max-width: $breakpoint-desktop-xwide) {
+          border-right: 0;
+        }
       }
     }
 

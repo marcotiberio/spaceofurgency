@@ -638,6 +638,16 @@ select {
   position: relative;
 }
 
+.notFullWidth {
+  @media (min-width: $breakpoint-desktop-xwide + 1) {
+    // grid-column-end: 12 !important;
+    // grid-column-start: 2 !important;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+  }
+}
+
 // .componentSpacing {
 //   padding-bottom: $spacing-component;
 
@@ -684,9 +694,11 @@ select {
   grid-column-end: 13;
   grid-column-start: 1;
   letter-spacing: 0.03rem;
-  margin: 0 0 40px;
+  margin-bottom: 40px;
   padding-top: 0;
+  text-align: left;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .postContent {

@@ -1,14 +1,14 @@
 {% if items|length > 0 %}
   <div class="flyntComponent componentSpacing {{ options.theme }}" id="{{ preContentHtml|lower|replace({' ': ''})}}" is="flynt-grid-posts-events-past">
     <div class="container">
-      <div class="preContent">{{ preContentHtml|e('wp_kses_post') }}</div>
-      <div class="contentHeader">
+      <div class="preContent notFullWidth">{{ preContentHtml|e('wp_kses_post') }}</div>
+      <div class="contentHeader notFullWidth">
         <div></div>
         <div>Date</div>
         <div>Where</div>
         <div>When</div>
       </div>
-      <ul class="grid">
+      <ul class="grid notFullWidth">
         {% for item in items %}
           <li class="grid-item">
             <div class="content">

@@ -1,6 +1,6 @@
 {% if items|length > 0 %}
   <div class="flyntComponent componentSpacing {{ options.theme }}" id="{{ preContentHtml|lower|replace({' ': ''})}}" is="flynt-grid-posts-events-upcoming">
-    <div class="container">
+    <div class="container notFullWidth">
       <div class="preContent">{{ preContentHtml|e('wp_kses_post') }}</div>
       <ul class="grid">
         {% for item in items %}

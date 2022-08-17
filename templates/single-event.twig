@@ -2,7 +2,7 @@
 
 {% block content %}
   <article class="post">
-    <header class="post-header componentSpacing">
+    <header class="post-header componentSpacing notFullWidth">
       <h1>{{ post.title }}</h1>
       {% if post.introHtml %}
         <div class="intro">{{ post.introHtml|e('wp_kses_post') }}</div>
