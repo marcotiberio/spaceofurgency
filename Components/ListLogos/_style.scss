@@ -29,17 +29,17 @@
     column-gap: $gap;
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     row-gap: $gap;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
   .media {
     align-items: center;
-    background-color: #fff;
+    background-color: $black;
     display: flex;
     height: 100%;
     justify-content: center;

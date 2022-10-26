@@ -1,0 +1,41 @@
+<div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-block-centered-wysiwyg">
+  <div class="container notFullWidth">
+    <div class="headline h1">
+      {{ headline }}
+    </div>
+    <div class="visual">
+      {% if image %}
+        <img class="figure-image lazyload"
+          src="{{ image.src|resize(32) }}"
+          data-srcset="{{function('wp_get_attachment_image_srcset', image.id)}}"
+          data-sizes="auto">
+          {% if image.caption %}
+            <figcaption class="figure-caption">{{ image.caption|e }}</figcaption>
+          {% endif %}
+      {% endif %}
+      {% if oembed %}
+        <div class="video box-inner box-inner--video">
+          <figure class="figure">
+            <img class="figure-image lazyload"
+              src="{{ posterImage.src|resize(32) }}"
+              data-srcset="{{function('wp_get_attachment_image_srcset', posterImage.id)}}"
+              data-sizes="auto"
+              alt="{{ posterImage.alt|e }}">
+            {% if posterImage.caption %}
+              <figcaption class="figure-caption">{{ posterImage.caption|e }}</figcaption>
+            {% endif %}
+          </figure>
+          <div class="video-player--isLoaded">
+            {{ oembed }}
+            {# <div class="video-loader"></div> #}
+            {# <button class="video-playButton" type="button" aria-label="Play Video"></button> #}
+          </div>
+          <figcaption>{{ videoCaption }}</figcaption>
+        </div>
+      {% endif %}
+    </div>
+    <div class="content">
+      {{ contentHtml|e('wp_kses_post') }}
+    </div>
+  </div>
+</div>

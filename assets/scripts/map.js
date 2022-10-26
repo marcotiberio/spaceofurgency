@@ -197,13 +197,14 @@ export const appendMaps = () => {
 export const initMap = () => {
   const mapData = $('.acf-map').data()
   const markerData = $('.marker').data()
+  const customIconData = $('.marker').attr('data-icon')
+  const windowHtml = $('.content')
 
   var map = new google.maps.Map(document.getElementsByClassName('acf-map')[0], {
     styles: mapStyle,
     disableDefaultUI: true,
     center: { lat: 43.370216, lng: 20.644 },
     zoom: 4,
-    minZoom: 3,
     restriction: {
       latLngBounds: {
         north: 85,
@@ -213,12 +214,44 @@ export const initMap = () => {
       }
     }
   })
+
+  var customIcon = new google.maps.Marker({
+    icon: customIconData
+  })
+
   var marker = new google.maps.Marker({
     position: markerData,
     map: map,
-    icon: {
-      url: '/wp-content/uploads/2022/05/markerorange-1.svg',
-      scaledSize: new google.maps.Size(25, 35)
-    }
+    icon: customIconData
   })
+
+  var contentString = new google.maps.Marker({
+    content: windowHtml
+  })
+
+  var infowindow = new google.maps.InfoWindow({
+    maxWidth: 350,
+    pixelOffset: new google.maps.Size(-10, -25),
+    content: contentString
+  })
+
+  marker.addListener('click', () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+      shouldFocus: false
+    })
+  })
+
+  // // if marker contains HTML, add it to an infoWindow
+  // if (markerData.html()) {
+  //   // create info window
+  //   var infoWindow = new google.maps.InfoWindow({
+  //     content: markerData.html()
+  //   })
+  //   // show info window when marker is clicked
+  //   google.maps.event.addListener(markerData, 'click', function () {
+  //     infoWindow.open(map, markerData)
+  //   })
+  // }
 }

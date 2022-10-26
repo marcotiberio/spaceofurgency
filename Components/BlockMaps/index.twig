@@ -19,10 +19,13 @@
 <div class="flyntComponent" is="flynt-block-maps">
   <div class="container">
     <div class="content">
+    {% for panel in maps %}
       <div class="acf-map" data-zoom="14" data-key="{{apiKey}}">
-        <div class="marker" data-lat="{{ maps.lat }}" data-lng="{{ maps.lng }}">
+        <div class="marker" data-lat="{{ panel.marker.lat }}" data-lng="{{ panel.marker.lng }}" data-icon="{{ panel.customIcon }}">
+          <p class="contentWindow">{{ panel.contentHtml|e('wp_kses_post') }}</p>
         </div>
       </div>
     </div>
+    {% endfor %}
   </div>
 </div>

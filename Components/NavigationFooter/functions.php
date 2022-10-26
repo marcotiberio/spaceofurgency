@@ -120,6 +120,29 @@ add_filter('Flynt/addComponentData?name=NavigationFooter', function ($data) {
 
 Options::addTranslatable('NavigationFooter', [
     [
+        'label' => __('Splatter', 'flynt'),
+        'name' => 'splatterTab',
+        'type' => 'tab',
+        'placement' => 'top',
+        'endpoint' => 0
+    ],
+    [
+        'label' => __('Splatter Color', 'flynt'),
+        'name' => 'splatterColor',
+        'type' => 'select',
+        'allow_null' => 0,
+        'multiple' => 0,
+        'ui' => 1,
+        'ajax' => 0,
+        'choices' => [
+            'orange' => __('Orange', 'flynt'),
+            'black' => __('Black', 'flynt'),
+            'purple' => __('Purple', 'flynt'),
+            'grey' => __('Grey', 'flynt'),
+        ],
+        'default_value' => 'orange'
+    ],
+    [
         'label' => __('Newsletter', 'flynt'),
         'name' => 'generalTab',
         'type' => 'tab',

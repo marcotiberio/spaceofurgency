@@ -602,6 +602,12 @@ select {
   z-index: 1000;
 }
 
+.mainFooter {
+  .before {
+    margin-bottom: -10px;
+  }
+}
+
 .pageWrapper {
   background-color: var(--pageBackground);
   display: flex;

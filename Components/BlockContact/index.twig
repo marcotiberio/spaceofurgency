@@ -1,0 +1,13 @@
+<div class="flyntComponent" is="flynt-block-contact">
+  <div class="container">
+    <div class="content">
+      {% if contentHtml %}
+        <div class="inner">{{ contentHtml|e('wp_kses_post') }}
+        </div>
+      {% endif %}
+      <div class="acf-map" data-zoom="14" data-key="{{apiKey}}">
+        <div class="marker" data-lat="{{ maps.lat }}" data-lng="{{ maps.lng }}"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -26,13 +26,15 @@
                     <span>What</span>
                   </div>
                   <div class="right">
+                    <div>
                     {% if item.start_date %}
                       <span>{{ item.start_date|date("d.m.Y")|escape('wp_kses_post') }}</span>
                       <span>-</span>
                     {% endif %}
-                    <span>{{ item.end_date|date("d.m.Y")|escape('wp_kses_post') }}</span>
-                    <span>{{ item.postWhere }}</span>
-                    <span>{{ item.postWhat }}</span>
+                      <span>{{ item.end_date|date("d.m.Y")|escape('wp_kses_post') }}</span>
+                    </div>
+                    <div>{{ item.postWhere }}</div>
+                    <div>{{ item.postWhat }}</div>
                   </div>
                   <div class="content-date">
                     

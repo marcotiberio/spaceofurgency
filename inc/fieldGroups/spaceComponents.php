@@ -108,6 +108,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockSoundcloudOembed\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockVideoText\getACFLayout(),
+                    Components\BlockCenteredWysiwyg\getACFLayout(),
                     Components\BlockWysiwygPost\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
                 ],

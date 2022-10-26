@@ -1,0 +1,10 @@
+.figure {
+  display: block;
+  margin-bottom: 0;
+
+  &-image {
+    &--isHidden {
+      visibility: hidden;
+    }
+  }
+}

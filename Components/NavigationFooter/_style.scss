@@ -1,13 +1,21 @@
 [is='flynt-navigation-footer'] {
   background-color: $orange;
   font-family: 'Octin College Regular', Helvetica, Arial, sans-serif;
-  padding: $spacing-large $spacing-small;
+
+  .before {
+    background-color: $black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 7.85vw;
+  }
   
   .container {
     align-items: flex-start;
     column-gap: $gap;
     display: flex;
     flex-flow: row;
+    padding: $spacing-large $spacing-small;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
       flex-flow: row wrap;

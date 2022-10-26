@@ -1,0 +1,47 @@
+[is='flynt-block-contact'] {
+  padding: $spacing-large*3 $spacing-large*2 0 !important;
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    padding: $spacing-large $spacing-small 0 !important;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $spacing-small*4 $spacing-small 0 !important;
+  }
+
+  .container {
+    grid-column-end: 13;
+    grid-column-start: 1;
+  }
+  
+  .content {
+    @include reset-content-margins;
+    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: $spacing-large;
+    text-align: inherit;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    .inner {
+      display: block;
+    }
+
+    .acf-map {
+      @media (max-width: $breakpoint-tablet) {
+        padding: 0;
+        width: 100%;
+      }
+    }
+
+    .acf-map {
+      height: 50vh;
+      min-height: 200px;
+      width: 100%;
+    }
+  }
+}
